@@ -1,7 +1,7 @@
 import Footer from "../components/layout/Footer"
 import MenuBar from "../components/layout/MenuBar"
 import WindowControls from "../components/layout/WindowControls"
-import Button from "../components/ui/Button"
+import Button from "../components/ui/button"
 
 export default function Home() {
   return (
