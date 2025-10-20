@@ -26,30 +26,27 @@ export default function ContentLayout({ title, description, sections, children }
           <WindowControls />
         </div>
 
-        {/* Main content area */}
-        <div className="flex">
-          {/* Table of Contents - Left sidebar */}
-          <div className="w-64 border-r-4 border-black p-6 bg-gray-50">
-            <h2 className="text-lg font-bold mb-4">contents</h2>
-            <nav className="space-y-2">
-              {sections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className={`block text-sm hover:text-blue-600 transition-colors ${
-                    section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
-                  }`}
-                >
-                  {section.title}
-                </a>
-              ))}
-            </nav>
-          </div>
+        {/* Table of Contents - Top */}
+        <div className="border-b-4 border-black p-6 bg-gray-50">
+          <h2 className="text-lg font-bold mb-4">contents</h2>
+          <nav className="space-y-2">
+            {sections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className={`block text-sm hover:text-blue-600 transition-colors ${
+                  section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
+                }`}
+              >
+                {section.title}
+              </a>
+            ))}
+          </nav>
+        </div>
 
-          {/* Content - Right side */}
-          <div className="flex-1 p-8">
-            {children}
-          </div>
+        {/* Main content area */}
+        <div className="p-8">
+          {children}
         </div>
 
         {/* Footer */}

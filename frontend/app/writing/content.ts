@@ -1,3 +1,5 @@
+import { getAllMarkdownContent, MarkdownContent } from '../../lib/markdown'
+
 export interface Writing {
   id: string
   title: string
@@ -7,6 +9,25 @@ export interface Writing {
   link?: string
 }
 
+// Convert MarkdownContent to Writing interface
+function markdownToWriting(content: MarkdownContent): Writing {
+  return {
+    id: content.id,
+    title: content.title,
+    description: content.description,
+    category: content.category,
+    date: content.date,
+    link: content.link,
+  }
+}
+
+// Get all writings from markdown files
+export async function getWritings(): Promise<Writing[]> {
+  const markdownContent = await getAllMarkdownContent('writing')
+  return markdownContent.map(markdownToWriting)
+}
+
+// Fallback static data for when markdown files don't exist
 export const writings: Writing[] = [
   {
     id: "on-being-carefree",
