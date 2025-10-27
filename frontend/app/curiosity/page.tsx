@@ -8,7 +8,7 @@ export default function MiscPage() {
         <div className="border-b-4 border-black p-4 flex items-center justify-between">
           <h1 className="text-4xl font-bold">
             <span className="text-4xl">./misc</span>{" "}
-            <span className="text-xl font-normal align-middle">(n) random things and thoughts that don't fit elsewhere</span>
+            <span className="text-xl font-normal align-middle">(n) random things i've learned :)</span>
           </h1>
           <WindowControls />
         </div>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,8 +41,8 @@
 }
 
 @theme inline {
-  /* Using Comic Neue as the primary font */
-  --font-sans: var(--font-comic-neue);
+  /* Using Quicksand as the primary font */
+  --font-sans: var(--font-quicksand);
 
   /* Color tokens */
   --color-window-red: #ff5f56;
@@ -93,5 +94,20 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Fix double background issue with code blocks */
+  .prose pre {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  
+  .prose pre code {
+    background: #0d1117 !important; /* GitHub dark background */
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    display: block !important;
   }
 }

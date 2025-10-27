@@ -65,7 +65,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
         description={`(n) ${project.description}`}
         sections={sections}
       >
-        <div className="prose prose-xl max-w-none">
+        <div>
           <div className="mb-8 text-sm text-gray-600">
             <span className="font-medium">Category:</span> {project.category.join(', ')} • 
             <span className="font-medium ml-2">Type:</span> Project
@@ -73,7 +73,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
           
           <div 
             dangerouslySetInnerHTML={{ __html: content }}
-            className="space-y-6"
+            className="prose prose-lg max-w-none"
           />
         </div>
       </ContentLayout>
@@ -87,7 +87,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
     >
-      <div className="prose prose-lg max-w-none">
+      <div>
         <div className="mb-8 text-sm text-gray-600">
           <span className="font-medium">Category:</span> {markdownContent.category.join(', ')} • 
           <span className="font-medium ml-2">Type:</span> Project
@@ -95,7 +95,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
         
         <div 
           dangerouslySetInnerHTML={{ __html: markdownContent.content }}
-          className="space-y-6"
+          className="prose prose-lg max-w-none"
         />
       </div>
     </ContentLayout>

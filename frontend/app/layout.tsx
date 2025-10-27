@@ -1,14 +1,15 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Comic_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import 'highlight.js/styles/github-dark.css'
+import type { Metadata } from "next"
+import { Quicksand } from "next/font/google"
+import type React from "react"
 import { Suspense } from "react"
 import "./globals.css"
 
-const comicNeue = Comic_Neue({
-  weight: ["300", "400", "700"],
+const quicksand = Quicksand({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-comic-neue",
+  variable: "--font-quicksand",
 })
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${comicNeue.variable} font-sans`}>
+      <body className={`${quicksand.variable} font-sans`}>
         <Suspense fallback={null}>
           {children}
           <Analytics />

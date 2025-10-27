@@ -19,8 +19,8 @@ export default function Home() {
         {/* Main content */}
         <main className="min-h-[500px] flex flex-col items-center justify-center px-8 py-20 bg-white">
           <div className="text-center space-y-6 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold">a sneak peek into thu's computer :)</h1>
-            <p className="text-xl md:text-2xl text-gray-700">
+            <h1 className="text-4xl font-bold">a sneak peek into thu's computer :)</h1>
+            <p className="text-xl text-gray-700">
               currently exploring the intersection of code and creativity
             </p>
             <div className="pt-6">

@@ -1,8 +1,15 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
-import { remark } from 'remark'
-import remarkHtml from 'remark-html'
+import rehypeHighlight from 'rehype-highlight'
+import rehypeSlug from 'rehype-slug'
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import slugifyLib from 'slugify'
+import { unified } from 'unified'
+import { visit } from 'unist-util-visit'
 
 export interface MarkdownContent {
   id: string
@@ -27,15 +34,23 @@ export async function getMarkdownContent(type: 'writing' | 'projects' | 'creativ
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Process markdown to HTML
-    const processedContent = await remark()
-      .use(remarkHtml)
-      .process(content)
+    // Parse markdown to AST
+    const tree = unified().use(remarkParse).use(remarkGfm).parse(content)
 
-    const htmlContent = processedContent.toString()
+    // Extract headings from AST before HTML conversion
+    const sections = extractHeadingsFromAST(tree)
 
-    // Extract headings for TOC
-    const sections = extractHeadingsFromMarkdown(content)
+    // Convert markdown to HTML with auto-generated heading IDs and syntax highlighting
+    const processor = unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeSlug)
+      .use(rehypeHighlight)
+      .use(rehypeStringify)
+
+    const result = await processor.process(content)
+    const htmlContent = result.toString()
 
     return {
       id,
@@ -73,43 +88,30 @@ export async function getAllMarkdownContent(type: 'writing' | 'projects' | 'crea
   }
 }
 
-function extractHeadingsFromMarkdown(markdown: string): Array<{ id: string; title: string; level: number }> {
-  const headingRegex = /^(#{1,3})\s+(.+)$/gm
+function extractHeadingsFromAST(tree: any): Array<{ id: string; title: string; level: number }> {
   const headings: Array<{ id: string; title: string; level: number }> = []
-  let match
-
-  while ((match = headingRegex.exec(markdown)) !== null) {
-    const level = match[1].length
-    const rawTitle = match[2].trim()
-    const title = cleanMarkdownFormatting(rawTitle)
-    const id = rawTitle
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .replace(/^-|-$/g, '')
-
-    headings.push({ id, title, level })
-  }
-
+  
+  visit(tree, 'heading', (node: any) => {
+    const level = node.depth
+    const title = extractTextFromNode(node)
+    const id = slugifyLib(title, { lower: true, strict: true })
+    
+    if (level <= 3) {
+      headings.push({ id, title, level })
+    }
+  })
+  
   return headings
 }
 
-function cleanMarkdownFormatting(text: string): string {
-  return text
-    .replace(/\*\*(.*?)\*\*/g, '$1') // Remove bold **text**
-    .replace(/\*(.*?)\*/g, '$1') // Remove italic *text*
-    .replace(/`(.*?)`/g, '$1') // Remove code `text`
-    .replace(/\[(.*?)\]\(.*?\)/g, '$1') // Remove links [text](url) -> text
-    .replace(/#{1,6}\s*/g, '') // Remove heading markers
-    .trim()
+function extractTextFromNode(node: any): string {
+  if (node.value) return node.value
+  if (node.children) {
+    return node.children.map((child: any) => extractTextFromNode(child)).join('')
+  }
+  return ''
 }
 
 export function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '')
+  return slugifyLib(text, { lower: true, strict: true })
 }

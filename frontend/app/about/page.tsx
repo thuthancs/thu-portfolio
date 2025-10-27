@@ -17,21 +17,36 @@ export default function AboutPage() {
 
           {/* Window content */}
           <div className="p-12 min-h-[500px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
               {/* Left column - Text content */}
               <div className="space-y-8">
-                <p className="text-lg leading-relaxed">
-                  hi, my name is thu and i'm from vietnam. i'm studying cs @ minerva university where i got the chance
-                  to travel to 4 cities around the world while pursuing my degree. among all the cities, san francisco
-                  has my heart.
+                <p>
+                  hi, my name is thư. i grew up in a small town in vietnam, embraced with trees, coffee, and lots of love from my family.
+                  i'm studying cs @ minerva university where i got the chance
+                  to travel to seoul, buenos aires, and berlin. among all the cities, san francisco
+                  has my heart and is where i currently call home :) 
+                  
                 </p>
-
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">big questions</h2>
-                  <ul className="space-y-2 list-disc list-inside">
-                    <li className="text-lg">how might we design better interfaces for ai products?</li>
-                    <li className="text-lg"></li>
+                  <h2 className="text-xl font-bold mb-2">my mission</h2>
+                  <p>
+                    to leave the internet with a few good explanations and stories and to develop technologies 
+                    that are fun, delightful, and human-centered.
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold">big questions</h2>
+                  <ul className="space-y-1 list-disc list-inside">
+                    <li>how might we design better interfaces for ai products?</li>
+                    <li>how to learn authentically in the age of ai?</li>
+                    <li>what does it mean to be a great engineer in the age of ai?</li>
                   </ul>
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold">in my free time</h2>
+                  <p>you'll see me spending more time than i should solving counting problems (think combinations, permutation, etc),
+                    prototyping ways to redesign popular apps, exploring new cafes, making art with code/paper and try something i'm bad at :)
+                  </p>
                 </div>
               </div>
 

@@ -34,7 +34,7 @@ export default function ContentLayout({ title, description, sections, children }
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className={`block text-sm hover:text-blue-600 transition-colors ${
+                className={`block text-sm hover:text-[#3E80D3] transition-colors ${
                   section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
                 }`}
               >

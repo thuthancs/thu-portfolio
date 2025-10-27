@@ -62,7 +62,7 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
         description={`(n) ${creative.description}`}
         sections={sections}
       >
-        <div className="prose prose-xl max-w-none">
+        <div>
           <div className="mb-8 text-sm text-gray-600">
             <span className="font-medium">Category:</span> {creative.categories?.join(', ') || 'Creative'} • 
             <span className="font-medium ml-2">Type:</span> Creative Project
@@ -70,7 +70,7 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
           
           <div 
             dangerouslySetInnerHTML={{ __html: content }}
-            className="space-y-6"
+            className="prose prose-lg max-w-none"
           />
         </div>
       </ContentLayout>
@@ -84,7 +84,7 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
     >
-      <div className="prose prose-lg max-w-none">
+      <div>
         <div className="mb-8 text-sm text-gray-600">
           <span className="font-medium">Category:</span> {markdownContent.category.join(', ')} • 
           <span className="font-medium ml-2">Type:</span> Creative Project
@@ -92,7 +92,7 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
         
         <div 
           dangerouslySetInnerHTML={{ __html: markdownContent.content }}
-          className="space-y-6"
+          className="prose prose-lg max-w-none"
         />
       </div>
     </ContentLayout>
