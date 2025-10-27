@@ -35,7 +35,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold">big questions</h2>
+                  <h2 className="text-xl font-bold mb-2">big questions</h2>
                   <ul className="space-y-1 list-disc list-inside">
                     <li>how might we design better interfaces for ai products?</li>
                     <li>how to learn authentically in the age of ai?</li>

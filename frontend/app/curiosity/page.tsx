@@ -7,7 +7,7 @@ export default function MiscPage() {
         {/* Window header */}
         <div className="border-b-4 border-black p-4 flex items-center justify-between">
           <h1 className="text-4xl font-bold">
-            <span className="text-4xl">./misc</span>{" "}
+            <span className="text-4xl">./curiosity</span>{" "}
             <span className="text-xl font-normal align-middle">(n) random things i've learned :)</span>
           </h1>
           <WindowControls />
