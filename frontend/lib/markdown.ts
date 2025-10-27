@@ -28,7 +28,7 @@ export interface MarkdownContent {
 
 const contentDirectory = path.join(process.cwd(), '..', 'content')
 
-export async function getMarkdownContent(type: 'writing' | 'projects' | 'creative', id: string): Promise<MarkdownContent | null> {
+export async function getMarkdownContent(type: 'writing' | 'projects' | 'creative' | 'curiosity', id: string): Promise<MarkdownContent | null> {
   try {
     const fullPath = path.join(contentDirectory, type, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -68,7 +68,7 @@ export async function getMarkdownContent(type: 'writing' | 'projects' | 'creativ
   }
 }
 
-export async function getAllMarkdownContent(type: 'writing' | 'projects' | 'creative'): Promise<MarkdownContent[]> {
+export async function getAllMarkdownContent(type: 'writing' | 'projects' | 'creative' | 'curiosity'): Promise<MarkdownContent[]> {
   try {
     const directory = path.join(contentDirectory, type)
     const filenames = fs.readdirSync(directory)

@@ -30,25 +30,11 @@ export async function getWritings(): Promise<Writing[]> {
 // Fallback static data for when markdown files don't exist
 export const writings: Writing[] = [
   {
-    id: "on-being-carefree",
-    title: "on being carefree",
-    description: "what my name taught me about living intentionally",
-    category: ["personal", "reflection"],
-    date: "2024-01-15",
-  },
-  {
     id: "designing-for-ai",
     title: "designing for ai",
     description: "how might we create better interfaces for ai products that feel human",
     category: ["design", "ai"],
     date: "2024-02-03",
-  },
-  {
-    id: "traveling-while-learning",
-    title: "traveling while learning",
-    description: "lessons from studying cs across 4 different cities",
-    category: ["education", "travel"],
-    date: "2024-01-28",
   },
   {
     id: "vietnamese-handwriting-ml",
@@ -58,17 +44,21 @@ export const writings: Writing[] = [
     date: "2024-02-10",
   },
   {
-    id: "san-francisco-heart",
-    title: "san francisco heart",
-    description: "why this city captured my heart and changed my perspective",
-    category: ["personal", "cities"],
-    date: "2024-01-20",
+    id: "neural-nets-from-scratch",
+    title: "neural nets from scratch",
+    description: "understanding the fundamentals of neural networks by building one from scratch",
+    category: ["technical", "ml"],
   },
   {
-    id: "minerva-university-experience",
-    title: "minerva university experience",
-    description: "what it's like to study at a global university",
-    category: ["education", "personal"],
-    date: "2024-02-05",
+    id: "convolutional-neural-networks",
+    title: "convolutional neural networks",
+    description: "exploring the architecture and applications of CNNs in image processing",
+    category: ["technical", "ml"],
   },
+  {
+    id: "k-nearest-neighbors-algorithm",
+    title: "k-nearest-neighbors algorithm",
+    description: "implementation of kNN from scratch in Python",
+    category: ["technical", "ml"],
+  }
 ]

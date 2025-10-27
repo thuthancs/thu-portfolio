@@ -9,8 +9,8 @@ export default function WritingPage() {
         {/* Window header */}
         <div className="border-b-4 border-black p-4 flex items-center justify-between">
           <h1 className="text-4xl font-bold">
-            <span className="text-4xl">./writing</span>{" "}
-            <span className="text-xl font-normal align-middle">(n) thoughts, reflections, and stories from my journey</span>
+            <span className="text-4xl">./blog</span>{" "}
+            <span className="text-xl font-normal align-middle">(n) thoughts, reflections, and technical deep dives</span>
           </h1>
           <WindowControls />
         </div>

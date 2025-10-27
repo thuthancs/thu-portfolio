@@ -6,13 +6,44 @@ import { useState } from "react"
 import WindowControls from "../../components/layout/WindowControls"
 
 export default function ContactPage() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Message:", message)
-    alert("Message sent! (This is a demo)")
-    setMessage("")
+    setIsLoading(true)
+    setStatus("idle")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+        }),
+      })
+
+      if (response.ok) {
+        setStatus("success")
+        setName("")
+        setEmail("")
+        setMessage("")
+      } else {
+        setStatus("error")
+      }
+    } catch (error) {
+      console.error("Error sending message:", error)
+      setStatus("error")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const socialLinks = [
@@ -78,7 +109,25 @@ export default function ContactPage() {
 
         {/* Window content */}
         <div className="p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Name input */}
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="your name (optional)"
+              className="w-full p-4 text-lg border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black"
+            />
+
+            {/* Email input */}
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your email (optional)"
+              className="w-full p-4 text-lg border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black"
+            />
+
             {/* Message textarea */}
             <textarea
               value={message}
@@ -88,12 +137,25 @@ export default function ContactPage() {
               required
             />
 
+            {/* Status message */}
+            {status === "success" && (
+              <div className="p-4 bg-green-100 border-2 border-black text-green-800">
+                ✓ Message sent successfully!
+              </div>
+            )}
+            {status === "error" && (
+              <div className="p-4 bg-red-100 border-2 border-black text-red-800">
+                ✗ Failed to send message. Please try again.
+              </div>
+            )}
+
             {/* Send button */}
             <button
               type="submit"
-              className="w-full py-4 text-xl font-bold bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all"
+              disabled={isLoading}
+              className="w-full py-4 text-xl font-bold bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              send :)
+              {isLoading ? "sending..." : "send :)"}
             </button>
           </form>
 

@@ -63,5 +63,11 @@ export const projects: Project[] = [
     description: "learn git internals in-depth by writing git in python",
     category: ["all", "data"],
   },
+  {
+    id: "reinfocement-learning-games",
+    title: "reinfocement-learning-games",
+    description: "an interactive web app that teaches curious beginners about rl concepts via games",
+    category: ["all", "ai"],
+  }
 ]
   
