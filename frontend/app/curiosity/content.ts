@@ -49,6 +49,12 @@ export const curiosities: Curiosity[] = [
     description: "a fun network experiment to see how connected we really are",
     category: ["Technical"],
     date: "2025"
+  },
+  {
+    id: "4",
+    title: "so...what exactly is an npm?",
+    description: "unpacking the mystery behind npm and its role in modern web development",
+    category: ["Technical"],
   }
 ]
 
