@@ -68,6 +68,12 @@ export const projects: Project[] = [
     title: "reinfocement-learning-games",
     description: "an interactive web app that teaches curious beginners about rl concepts via games",
     category: ["all", "ai"],
+  },
+  {
+    id: "interactive-library",
+    title: "interactive-library",
+    description: "re-implementations of cool interactive components on the web",
+    category: ["all"]
   }
 ]
   
