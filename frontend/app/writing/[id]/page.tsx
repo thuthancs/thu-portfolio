@@ -58,15 +58,9 @@ export default async function WritingDetail({ params }: WritingDetailProps) {
         sections={sections}
       >
         <div>
-          <div className="mb-8 text-sm text-gray-600">
-            <span className="font-medium">Category:</span> {writing.category.join(', ')} • 
-            <span className="font-medium ml-2">Date:</span> {writing.date} • 
-            <span className="font-medium ml-2">Type:</span> Writing
-          </div>
-          
           <div 
             dangerouslySetInnerHTML={{ __html: content }}
-            className="prose prose-lg max-w-none"
+            className="prose max-w-none"
           />
         </div>
       </ContentLayout>
@@ -81,15 +75,9 @@ export default async function WritingDetail({ params }: WritingDetailProps) {
       sections={markdownContent.sections}
     >
       <div>
-        <div className="mb-8 text-sm text-gray-600">
-          <span className="font-medium">Category:</span> {markdownContent.category.join(', ')} • 
-          <span className="font-medium ml-2">Date:</span> {markdownContent.date} • 
-          <span className="font-medium ml-2">Type:</span> Writing
-        </div>
-        
         <div 
           dangerouslySetInnerHTML={{ __html: markdownContent.content }}
-          className="prose prose-lg max-w-none"
+          className="prose max-w-none"
         />
       </div>
     </ContentLayout>
