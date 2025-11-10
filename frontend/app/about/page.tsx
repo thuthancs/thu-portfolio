@@ -60,7 +60,9 @@ export default function AboutPage() {
                   <p>
                     i'm building an interactive series to teach people <a href="https://github.com/thuthancs/snake-game-rl" className="hover:underline text-blue-500">reinforcement learning via games</a>, 
                     reimplementing <a href="https://interactive-library-phi.vercel.app/" className="hover:underline text-blue-500">micro-interactions</a> on the web, learning how to write <a href="https://github.com/thuthancs/performance-optimization" className="hover:underline text-blue-500">high-performant code</a> in python,
-                    and...well, creating a comprehensive resource on the theory and applications <a href="https://github.com/thuthancs/dsa-practice" className="hover:underline text-blue-500">data structures and algorithms</a> (yes, leetcode included) :)
+                    and...well, creating a comprehensive resource on the theory and applications <a href="https://github.com/thuthancs/dsa-practice" className="hover:underline text-blue-500">data structures and algorithms</a> (yes, it's leetcode).
+                    in a nutshell, i'm find myself juggling between two identities everyday: someone who is dreamy and loves tinkering with designing beautiful things, and someone who is grounded and loves diving deep into low-level, technical details to make things go brrrr!
+                    the latter one emerged after me being traumatized by how long it took for my model training and simulations to finish on my laptop, so now i’m on a quest to make code go faster. life’s just too short to stare at epoch 10/100 for hours :)
                   </p>
                 </div>
                 <div>
@@ -81,6 +83,7 @@ export default function AboutPage() {
                   <ul className="space-y-1 list-disc list-inside">
                     <li>some of my favorite fonts are Quicksand, Georgia, Be Vietnam Pro and Helvetica :) i don't like Times New Roman</li>
                     <li>i love (and i think i'm good at) <a href="https://www.instagram.com/divachefs/" className="hover:underline text-blue-500">cooking</a> - my specialties are vietnamese dishes!</li>
+                    <li>i love everything handwritten(-like) so i'm a big fan of excalidraw!</li>
                     <li>favourite artists: <a href="https://www.youtube.com/watch?v=atklpvgaBWA&list=RDatklpvgaBWA&start_radio=1" className="hover:underline text-blue-500">olivia dean</a> and <a href="https://www.youtube.com/watch?v=08Ndzf5-HxI&list=RD08Ndzf5-HxI&start_radio=1" className="hover:underline text-blue-500">john mayer</a></li>
                     <li>i've built over 5 versions of personal website and finally came up with the design I'm most satisfied with, which is the one you're seeing now!</li>
                   </ul>
