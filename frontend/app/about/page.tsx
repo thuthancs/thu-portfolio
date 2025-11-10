@@ -49,43 +49,49 @@ export default function AboutPage() {
               {/* Text content */}
               <div className="space-y-8">
                 <p>
-                  hi, my name is thư. i grew up in a <a href="https://www.google.com/search?q=daknong&sourceid=chrome&ie=UTF-8" className="underline hover:text-blue-500">small town</a> in the central highlands of vietnam, embraced by trees, coffee, and lots of love from my family.
+                  hi, my name is thư. i grew up in a <a href="https://www.google.com/search?q=daknong&sourceid=chrome&ie=UTF-8" className="hover:underline text-blue-500">small town</a> in the central highlands of vietnam, embraced by trees, coffee, and lots of love from my family.
                   i'm studying cs @ minerva university where i got the chance
                   to travel to seoul, buenos aires, and berlin. among all the cities, san francisco
-                  has my heart and is where i currently call home :) 
+                  has my heart and is where i currently call home.
                   
                 </p>
                 <div>
-                  <h2 className="text-xl font-bold mb-2">my mission</h2>
+                  <h2 className="text-xl font-bold mb-2">when i'm awake</h2>
+                  <p>
+                    i'm building an interactive series to teach people <a href="https://github.com/thuthancs/snake-game-rl" className="hover:underline text-blue-500">reinforcement learning via games</a>, 
+                    reimplementing <a href="https://interactive-library-phi.vercel.app/" className="hover:underline text-blue-500">micro-interactions</a> on the web, learning how to write <a href="https://github.com/thuthancs/performance-optimization" className="hover:underline text-blue-500">high-performant code</a> in python,
+                    and...well, creating a comprehensive resource on the theory and applications <a href="https://github.com/thuthancs/dsa-practice" className="hover:underline text-blue-500">data structures and algorithms</a> (yes, leetcode included) :)
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold mb-2">my hopes and dreams</h2>
                   <p className="mb-4">
                     to leave the internet with a few good explanations and stories and to develop technologies 
                     that are fun, delightful, and human-centered.
                   </p>
-                  
-                  <p>we’re bombarded with new information every day, and sometimes we feel pressured to create more. but i believe invention and innovation are byproducts of deep understanding. i don’t set out to create things—but by understanding something deeply enough, i find ways and ideas to create something new.
-                    i have always loved learning and i always will. my hopes and dreams are simple: i want to create something on the internet that someone stumbles upon and messages me about—”this is cool” or “this helps me understand something i used to struggle with.” if just one person (not me!) finds it helpful, that’s enough.</p>
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold mb-2">big questions</h2>
+                  <h2 className="text-xl font-bold mb-2">when i'm not working or napping</h2>
+                  <p>you'll see me spending more time than i should solving counting problems (think combinations, permutation, etc), 
+                    exploring new cafes, building clones of apps i like, making art with code/paper and trying something i'm bad at (like chess).
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold mb-2">fun facts</h2>
+                  <ul className="space-y-1 list-disc list-inside">
+                    <li>some of my favorite fonts are Quicksand, Georgia, Be Vietnam Pro and Helvetica :) i don't like Times New Roman</li>
+                    <li>i love (and i think i'm good at) <a href="https://www.instagram.com/divachefs/" className="hover:underline text-blue-500">cooking</a> - my specialties are vietnamese dishes!</li>
+                    <li>favourite artists: <a href="https://www.youtube.com/watch?v=atklpvgaBWA&list=RDatklpvgaBWA&start_radio=1" className="hover:underline text-blue-500">olivia dean</a> and <a href="https://www.youtube.com/watch?v=08Ndzf5-HxI&list=RD08Ndzf5-HxI&start_radio=1" className="hover:underline text-blue-500">john mayer</a></li>
+                    <li>i've built over 5 versions of personal website and finally came up with the design I'm most satisfied with, which is the one you're seeing now!</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold mb-2">an endless list of questions</h2>
                   <ul className="space-y-1 list-disc list-inside">
                     <li>how might we design better interfaces for ai products?</li>
                     <li>how to learn authentically in the age of ai?</li>
                     <li>what does it mean to be a great engineer in the age of ai?</li>
                   </ul>
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold mb-2">current pursuits</h2>
-                  <p>
-                    i must admit that i have way too many interests that given the constraint of a human lifetime, i might not be able to explore them all. but here are a few that i'm currently building.
-                    i'm building an <a href="https://github.com/thuthancs/snake-game-rl" className="underline hover:text-blue-500">interactive series</a> to teach people reinforcement learning via games, 
-                    exploring ways to redesign popular apps' ui/ux, and learning how to write high-performant code in python!
-                  </p>
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold mb-2">in my free time</h2>
-                  <p>you'll see me spending more time than i should solving counting problems (think combinations, permutation, etc), 
-                    exploring new cafes, building clones of apps i like, making art with code/paper and try something i'm bad at :)
-                  </p>
                 </div>
               </div>
             </div>
