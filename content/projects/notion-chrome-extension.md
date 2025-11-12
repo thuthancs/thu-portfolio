@@ -29,12 +29,12 @@ This manual data entry labeling is sometimes inaccurate because I was so into so
 
 ## Current Flow
 
-![image.png](/image.png)
+![image.png](/images/notion-chrome-extension/image.png)
 
 1. Open the LeetCode problem page
 2. Set up a timer based on the difficulty level of the question: 30 mins for hards, 20 mins for mediums, and 10 mins for easies.
 
-   ![Screenshot 2025-09-08 at 3.25.16 PM.png](/Screenshot_2025-09-08_at_3.25.16_PM.png)
+   ![Screenshot 2025-09-08 at 3.25.16 PM.png](/images/notion-chrome-extension/Screenshot_2025-09-08_at_3.25.16_PM.png)
 
 3. If the time it takes to solve the problem exceeds the set timer, manually reset the timer, because there is no sound notifying me when I’m out of time.
    1. Copied and pasted the first attempted solution to the page
@@ -98,7 +98,7 @@ For example, when I choose the LC database, the schema of the database will be d
 
 ## User Interface
 
-![user_interface.png](/user_interface.png)
+![user_interface.png](/images/notion-chrome-extension/user_interface.png)
 
 # Implementation
 
