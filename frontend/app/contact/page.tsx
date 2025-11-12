@@ -132,7 +132,7 @@ export default function ContactPage() {
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="leave a message for me..."
+              placeholder="leave a message for me... and remember to drink water :)"
               className="w-full h-64 p-6 text-lg border-2 border-black rounded-none resize-none focus:outline-none focus:ring-2 focus:ring-black"
               required
             />

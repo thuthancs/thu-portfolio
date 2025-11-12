@@ -30,8 +30,32 @@ export const projects: Project[] = [
   {
     id: "notion-chrome-extension",
     title: "notion-chrome-extension",
-    description: "a tutorial on building a chrome extension that integrates with notion api for leetcode performance tracking",
+    description: "a tutorial on building a chrome extension that integrates with notion for leetcode performance tracking",
     category: ["all", "automation"],
+  },
+  {
+    id: "reinfocement-learning",
+    title: "reinfocement-learning",
+    description: "an interactive tutorial that teaches curious beginners about rl concepts playing games",
+    category: ["all", "ai"],
+  },
+  {
+    id: "interactive-library",
+    title: "interactive-library",
+    description: "re-implementations of delightful interactive components on the web",
+    category: ["all"]
+  },
+  {
+    id: "how-i-develop-this-website",
+    title: "how-i-develop-this-website",
+    description: "learnings and reflection on building a personal portfolio",
+    category: ["all", "fullstack"],
+  },
+  {
+    id: "vietnamese-handwriting",
+    title: "vietnamese-handwriting",
+    description: "how to generate your own handwriting using ml algorithms",
+    category: ["all", "ai"],
   },
   {
     id: "meeting-translator",
@@ -46,34 +70,10 @@ export const projects: Project[] = [
     category: ["all", "fullstack"],
   },
   {
-    id: "how-i-develop-this-website",
-    title: "how-i-develop-this-website",
-    description: "a collection of notion templates and tutorials integrations",
-    category: ["all", "fullstack"],
-  },
-  {
-    id: "vietnamese-handwriting",
-    title: "vietnamese-handwriting",
-    description: "how to generate your own handwriting using ml algorithms",
-    category: ["all", "ai"],
-  },
-  {
-    id: "git-clone",
-    title: "git-clone",
-    description: "learn git internals in-depth by writing git in python",
+    id: "oss-contribution-rec",
+    title: "oss-contribution-rec",
+    description: "recommendation system for open source contributions",
     category: ["all", "data"],
-  },
-  {
-    id: "reinfocement-learning-games",
-    title: "reinfocement-learning-games",
-    description: "an interactive web app that teaches curious beginners about rl concepts via games",
-    category: ["all", "ai"],
-  },
-  {
-    id: "interactive-library",
-    title: "interactive-library",
-    description: "re-implementations of cool interactive components on the web",
-    category: ["all"]
   }
 ]
   
