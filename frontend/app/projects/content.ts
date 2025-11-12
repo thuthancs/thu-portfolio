@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: "notion-chrome-extension",
     title: "notion-chrome-extension",
-    description: "a collection of notion templates and tutorials integrations",
+    description: "a tutorial on building a chrome extension that integrates with notion api for leetcode performance tracking",
     category: ["all", "automation"],
   },
   {
