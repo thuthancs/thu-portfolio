@@ -39,6 +39,8 @@ export default function ContentLayout({ title, description, sections, children }
     }
   }, [sections])
 
+  const hasTableOfContents = sections && sections.length > 0
+
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
@@ -49,33 +51,40 @@ export default function ContentLayout({ title, description, sections, children }
           </h1>
         </div>
 
-        <div className="flex">
-          {/* Table of Contents - Side */}
-          <div className="w-1/4 p-6 pr-1 sticky top-8 self-start">
-            <nav className="space-y-2">
-              {sections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className={`block text-sm transition-colors ${
-                    activeSection === section.id
-                      ? 'text-[#3E80D3] font-bold'
-                      : 'hover:text-[#3E80D3]'
-                  } ${
-                    section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
-                  }`}
-                >
-                  {section.title}
-                </a>
-              ))}
-            </nav>
-          </div>
+        {hasTableOfContents ? (
+          <div className="flex">
+            {/* Table of Contents - Side */}
+            <div className="w-1/4 p-6 pr-1 sticky top-8 self-start">
+              <nav className="space-y-2">
+                {sections.map((section) => (
+                  <a
+                    key={section.id}
+                    href={`#${section.id}`}
+                    className={`block text-sm transition-colors ${
+                      activeSection === section.id
+                        ? 'text-[#3E80D3] font-bold'
+                        : 'hover:text-[#3E80D3]'
+                    } ${
+                      section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
+                    }`}
+                  >
+                    {section.title}
+                  </a>
+                ))}
+              </nav>
+            </div>
 
-          {/* Main content area */}
-          <div className="w-3/4 p-8 pl-1">
+            {/* Main content area */}
+            <div className="w-3/4 p-8 pl-1">
+              {children}
+            </div>
+          </div>
+        ) : (
+          /* Full width content when no table of contents */
+          <div className="px-48 py-8">
             {children}
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

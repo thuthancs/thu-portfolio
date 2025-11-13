@@ -1,5 +1,5 @@
+import Link from "next/link"
 import WindowControls from "../../components/layout/WindowControls"
-import ProjectCard from "../../components/ui/ProjectCard"
 import { writings } from "./content"
 
 export default function WritingPage() {
@@ -17,14 +17,12 @@ export default function WritingPage() {
 
         {/* Window content */}
         <div className="p-12 min-h-[500px]">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="flex flex-col gap-8">
             {writings.map((writing) => (
-              <ProjectCard 
-                key={writing.id} 
-                title={writing.title} 
-                description={writing.description}
-                href={`/writing/${writing.id}`}
-              />
+              <Link key={writing.id} href={`/writing/${writing.id}`} className="block group">
+                <h2 className="text-2xl font-bold group-hover:text-blue-500 transition-colors">{writing.title}</h2>
+                <p className="text-lg text-gray-600 mt-2">{writing.description}</p>
+              </Link>
             ))}
           </div>
         </div>

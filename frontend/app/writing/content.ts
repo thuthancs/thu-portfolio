@@ -30,6 +30,13 @@ export async function getWritings(): Promise<Writing[]> {
 // Fallback static data for when markdown files don't exist
 export const writings: Writing[] = [
   {
+    id: "build-a-startup-in-two-days",
+    title: "how we built a startup in 2 days",
+    description: "a story of how we built a lunch box startup from scratch in just 48 hours and what i've learned about the philosophy of quick iteration, relentless execution, and craftsmanship",
+    category: ["story", "startup"],
+    date: "2025-11-12",
+  },
+  {
     id: "designing-for-ai",
     title: "designing for ai",
     description: "how might we create better interfaces for ai products that feel human",
