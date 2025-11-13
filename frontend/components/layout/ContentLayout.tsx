@@ -44,11 +44,11 @@ export default function ContentLayout({ title, description, sections, children }
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold">
-            <span className="text-4xl">{title}</span>{" "}
-            <span className="text-xl font-normal align-middle">{description}</span>
-          </h1>
+        <div className="mb-2">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-4xl font-bold">{title}</h1>
+            <p className="text-xl font-normal mt-2">{description}</p>
+          </div>
         </div>
 
         {hasTableOfContents ? (
