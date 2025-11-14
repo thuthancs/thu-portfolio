@@ -1,5 +1,5 @@
 ---
-title: "how we built a startup in 2 days"
+title: 'how we built a "startup" in 2 days'
 description: "a fun experiment on doing what i love"
 date: "2025-11-12"
 ---
@@ -10,7 +10,7 @@ in less than two days, we brainstormed everything—the food, the packaging, the
 
 the next day, i woke up at 3am, took two early-morning classes until 7am, reviewed a coworker's code, then headed to esther's place at 9am. we prepped, cooked, designed a little marketing material, and delivered everything by noon. it was a very packed morning, and i was exhausted, but honestly? i felt fulfilled and rewarded. i always thought i wasn't a good executor, but this whole situation proved i'm way more execution-oriented than i give myself credit for.
 
-when our first customer messaged us saying they loved the dish, it felt magical. like, people actually loved our food as much as we do. and then that evening, we got another order—six boxes—from a small startup. lowkey, i didn't want to accept more orders, but then i thought… why not? take the challenge. so we planned again. and we executed again.
+when our first customer messaged us saying they loved the dish, it felt magical. like, people actually loved our food as much as we do. and then that evening, we got another order—six boxes—from a small startup. lowkey, i didn't want to accept more orders, but then i thought… why not? take the challenge. so we planned again. and we executed again despite some logistical challenges (e.g., i had to wake up at 6am, went to her house, cooked, then went to another mandatory event cause apparently i'm still in school).
 
 <div style="display: flex; justify-content: center;">
     <img src="/images/build-startup-two-days/chicken_menu.png" alt="chicken_menu.png" width="250" />

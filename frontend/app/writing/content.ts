@@ -32,7 +32,7 @@ export const writings: Writing[] = [
   {
     id: "build-a-startup-in-two-days",
     title: "how we built a startup in 2 days",
-    description: "a story of how we built a lunch box startup from scratch in just 48 hours and what i've learned about the philosophy of quick iteration, relentless execution, and craftsmanship",
+    description: "a story of how we built a lunch box startup from scratch in just 48 hours and what i've learned about the philosophy of quick iteration, relentless execution, and craftsmanship. with that being said, being a founder is so hard and i would love to just be a normal engineer :)",
     category: ["story", "startup"],
     date: "2025-11-12",
   },
