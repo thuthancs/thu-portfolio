@@ -37,11 +37,11 @@ export const writings: Writing[] = [
     date: "2025-11-12",
   },
   {
-    id: "designing-for-ai",
-    title: "designing for ai",
-    description: "how might we create better interfaces for ai products that feel human",
+    id: "tidbits-of-life",
+    title: "tidbits of life - you cannot pour from an empty cup",
+    description: "the past few days have taught me something very important: you cannot pour from an empty cup. i know this wisdom is not something new, but it takes some hands-on experience to actually internalize it. in a nutshell, here is what happened and what i did that has significantly improved my mindset",
     category: ["design", "ai"],
-    date: "2024-02-03",
+    date: "2025-11-15",
   },
   {
     id: "vietnamese-handwriting-ml",
