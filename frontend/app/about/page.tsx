@@ -84,7 +84,7 @@ export default function AboutPage() {
                     <li>some of my favorite fonts are Quicksand, Georgia, Be Vietnam Pro and Helvetica :) i don't like Times New Roman</li>
                     <li>i love (and i think i'm good at) <a href="https://www.instagram.com/divachefs/" className="hover:underline text-blue-500">cooking</a> - my specialties are vietnamese dishes!</li>
                     <li>i think dark mode is overrated and solarized light is so underrated!</li>
-                    <li>favourite artists: <a href="https://www.youtube.com/watch?v=atklpvgaBWA&list=RDatklpvgaBWA&start_radio=1" className="hover:underline text-blue-500">olivia dean</a> and <a href="https://www.youtube.com/watch?v=08Ndzf5-HxI&list=RD08Ndzf5-HxI&start_radio=1" className="hover:underline text-blue-500">john mayer</a></li>
+                    <li>favourite artists: <a href="https://www.youtube.com/watch?v=atklpvgaBWA&list=RDatklpvgaBWA&start_radio=1" className="hover:underline text-blue-500">olivia dean</a>, <a href="https://www.youtube.com/watch?v=08Ndzf5-HxI&list=RD08Ndzf5-HxI&start_radio=1" className="hover:underline text-blue-500">john mayer</a>, <a href="https://www.youtube.com/watch?v=ttk4ljbYxFg&list=RDttk4ljbYxFg&start_radio=1" className="hover:underline text-blue-500">trang</a>, <a href="https://www.youtube.com/watch?v=eQi6xf8Hl_I" className="hover:underline text-blue-500">tùng</a></li>
                     <li>i've built over 5 versions of personal website and finally came up with the design I'm most satisfied with, which is the one you're seeing now!</li>
                   </ul>
                 </div>
