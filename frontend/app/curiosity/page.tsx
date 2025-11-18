@@ -1,3 +1,4 @@
+import Link from "next/link"
 import WindowControls from "../../components/layout/WindowControls"
 import { curiosities } from "./content"
 
@@ -21,17 +22,19 @@ export default function CuriosityPage() {
               <li key={item.id} className="flex items-start gap-3">
                 <span className="text-2xl font-bold">•</span>
                 <div className="flex-1">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                      <p className="text-base text-gray-700">{item.description}</p>
+                  <Link href={`/curiosity/${item.id}`} className="block group">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors">{item.title}</h3>
+                        <p className="text-base text-gray-700">{item.description}</p>
+                      </div>
+                      {item.category && item.category.length > 0 && (
+                        <span className="text-sm text-gray-600 whitespace-nowrap">
+                          {item.category.join(', ')}
+                        </span>
+                      )}
                     </div>
-                    {item.category && item.category.length > 0 && (
-                      <span className="text-sm text-gray-600 whitespace-nowrap">
-                        {item.category.join(', ')}
-                      </span>
-                    )}
-                  </div>
+                  </Link>
                 </div>
               </li>
             ))}

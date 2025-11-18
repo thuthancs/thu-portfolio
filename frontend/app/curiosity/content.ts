@@ -30,31 +30,37 @@ export async function getCuriosities(): Promise<Curiosity[]> {
 // Fallback static data for when markdown files don't exist
 export const curiosities: Curiosity[] = [
   {
-    id: "1",
+    id: "permute-mississippi",
     title: "how many ways to permute the word mississippi?",
     description: "a review of permutations and combinations",
     category: ["Learning"],
     date: "2025"
   },
   {
-    id: "2",
+    id: "history-of-ai",
     title: "the history of artificial intelligence",
     description: "let's go back in time to where it all began",
     category: ["Technical"],
     date: "2025"
   },
   {
-    id: "3",
+    id: "handshakes-to-sam-altman",
     title: "how many handshakes are you away from sam altman?",
     description: "a fun network experiment to see how connected we really are",
     category: ["Technical"],
     date: "2025"
   },
   {
-    id: "4",
+    id: "what-is-npm",
     title: "so...what exactly is an npm?",
     description: "unpacking the mystery behind npm and its role in modern web development",
     category: ["Technical"],
+  },
+  {
+    id: "daily-learn-log",
+    title: "daily learn log",
+    description: "a log of what i've learned each day",
+    category: ["Learning"],
   }
 ]
 
