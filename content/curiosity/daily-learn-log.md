@@ -25,3 +25,11 @@ date: "2025-11-17"
 - data schema and column names are super prone to change so don't hardcode it in the function. it's better to put the column names we want to extract from a dataset as something configurable.
 - always ask someone who has little to no context to the code you wrote give you the most honest and direct feedback on your documentation and code. you won't realize how confusing or unreadable your code is :)
 - sometimes you can use canva to design technical diagram :) no need to use miro or excalidraw. as long as the diagram conveys enough and clear information. it all comes down to first principles, not the tools.
+
+### 19 Nov
+
+- the word used to describe a UI that can change its size and width depending on the screen size is "responsive" :)
+
+### 20 Nov
+
+- animation is basically a tons of frames arranged sequentially
