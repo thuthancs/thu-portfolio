@@ -57,6 +57,12 @@ export const writings: Writing[] = [
     category: ["technical", "fullstack"],
   },
   {
+    id: "fun-and-cool",
+    title: "fun and cool are just subjective concepts",
+    description: "don't let others define what is fun and cool for you",
+    category: ["thoughts", "reflection"],
+  },
+  {
     id: "neural-nets-from-scratch",
     title: "neural nets from scratch",
     description: "understanding the fundamentals of neural networks by building one from scratch",
