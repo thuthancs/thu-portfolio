@@ -37,5 +37,7 @@ date: "2025-11-17"
 ### 21 Nov
 
 - generating images using AI is easy, keeping the consistency of style and design across design is hard.
-- things take longer than you expect and things less time than you expect :) my friend and i finished this [mvp for a fun project](https://race-personality.vercel.app/) in about 5 hours in total. we came up with the idea in 15 mins, finished the storyline in 2 hours, and locked in for ~3 hours to get it done. i thought it would take us several days to finish it but then one day i told her: "let's finish it tonight!" and... we did. estimation has always been hard.
-- prompting is by no means a trivial task and most of the time, it feels random and unpredictable, like i have no control over how the output would turn apart from tweaking, waiting until the output is generated, deciding whether i like it or not and tweaking it again.
+- things take longer than you expect and things take less time than you expect :) my friend and i finished this [mvp for a fun project](https://race-personality.vercel.app/) in ~5 hours in total. we came up with the idea in 15 mins, finished the storyline in 2 hours, and locked in for ~3 hours to get it done. i thought it would take us several days to finish it but then one day i told her: "let's finish it tonight!" and... we did. estimation has always been hard.
+- prompting is by no means a trivial task and most of the time, it feels random and unpredictable. like i have no control over how the output would turn out apart from from the fact that i can keep tweaking, waiting until the output is generated, deciding whether i like it or not and tweaking it again. i wonder if there is a more deterministic and controllable way of doing it.
+
+### 22 Nov
