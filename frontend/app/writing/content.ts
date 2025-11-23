@@ -53,13 +53,13 @@ export const writings: Writing[] = [
   {
     id: "learning-the-modern-tech-stack",
     title: "how to build with the modern tech stack",
-    description: "a comprehensive guide on building applications using the modern tech stack including TypeScript, NodeJS, GraphQL, Prisma, Postgres, NextJS, React, and Relay.",
+    description: "a comprehensive guide on building applications using the modern tech stack including TypeScript, NodeJS, GraphQL, Prisma, Postgres, NextJS, React, and Relay. and some notes on how to learn things you're not familiar with in a short amount of time.",
     category: ["technical", "fullstack"],
   },
   {
     id: "fun-and-cool",
     title: "fun and cool are just subjective concepts",
-    description: "don't let others define what is fun and cool for you",
+    description: "every sort of problem is fun and cool as long as you care about it deeply and personally. virality or adoption is probably just a side effect of that. the most personal is the most creative.",
     category: ["thoughts", "reflection"],
   },
   {
