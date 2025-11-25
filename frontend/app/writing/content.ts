@@ -37,11 +37,16 @@ export const writings: Writing[] = [
     date: "2025-11-12",
   },
   {
-    id: "tidbits-of-life",
-    title: "tidbits of life - you cannot pour from an empty cup",
-    description: "the past few days have taught me something very important: you cannot pour from an empty cup. i know this wisdom is not something new, but it takes some hands-on experience to actually internalize it. in a nutshell, here is what happened and what i did that has significantly improved my mindset",
-    category: ["story", "reflection"],
-    date: "2025-11-15",
+    id: "on-product-thinking",
+    title: "on product thinking",
+    description: "some thoughts on categorizing products and what it means to build things that people truly want. this is my attempt to put into words some mental models and frameworks that i find useful for me when approaching product development, especially in this interesting time of AI.",
+    category: ["thoughts", "product"],
+  },
+  {
+    id: "empirical-self-improvement",
+    title: "empirical self improvement",
+    description: "how to approach self-improvement in empirically by treating yourself as a scientific experiment. this involves forming hypotheses, running experiments, collecting data, and analyzing results to make informed decisions about personal growth and development.",
+    category: ["thoughts", "self-improvement"],
   },
   {
     id: "understanding-react-from-first-principles",
@@ -55,6 +60,13 @@ export const writings: Writing[] = [
     title: "how to build with the modern tech stack",
     description: "a comprehensive guide on building applications using the modern tech stack including TypeScript, NodeJS, GraphQL, Prisma, Postgres, NextJS, React, and Relay. and some notes on how to learn things you're not familiar with in a short amount of time.",
     category: ["technical", "fullstack"],
+  },
+  {
+    id: "tidbits-of-life",
+    title: "tidbits of life - you cannot pour from an empty cup",
+    description: "the past few days have taught me something very important: you cannot pour from an empty cup. i know this wisdom is not something new, but it takes some hands-on experience to actually internalize it. in a nutshell, here is what happened and what i did that has significantly improved my mindset",
+    category: ["story", "reflection"],
+    date: "2025-11-15",
   },
   {
     id: "fun-and-cool",

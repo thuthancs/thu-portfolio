@@ -41,3 +41,14 @@ date: "2025-11-17"
 - prompting is by no means a trivial task and most of the time, it feels random and unpredictable. like i have no control over how the output would turn out apart from from the fact that i can keep tweaking, waiting until the output is generated, deciding whether i like it or not and tweaking it again. i wonder if there is a more deterministic and controllable way of doing it.
 
 ### 22 Nov
+
+- you can reduce the resolution of the images (hence the size) downloaded from Figma by using jpeg and adjust the resolution to about 0.2 or 0.5
+
+### 23 Nov
+
+- design is not all about aesthetics
+- llms have seen a lot so they don't have a 'good' opinion on many things
+
+### 24 Nov
+
+- remember you can use `appendleft()` to add an item in front of a queue
