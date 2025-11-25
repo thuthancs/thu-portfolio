@@ -52,28 +52,28 @@ export const projects: Project[] = [
     category: ["all", "fullstack"],
   },
   {
-    id: "vietnamese-handwriting",
-    title: "vietnamese-handwriting",
-    description: "how to generate your own handwriting using ml algorithms",
-    category: ["all", "ai"],
-  },
-  {
     id: "meeting-translator",
     title: "meeting-translator",
     description: "translate your boring meeting notes in different styles",
     category: ["all", "automation", "ai"],
   },
   {
-    id: "interview-prep-partner",
-    title: "interview-prep-partner",
-    description: "find accountability partner for interview prep",
-    category: ["all", "fullstack"],
-  },
-  {
     id: "oss-contribution-rec",
     title: "oss-contribution-rec",
     description: "recommendation system for open source contributions",
     category: ["all", "data"],
+  },
+  {
+    id: "vietnamese-handwriting",
+    title: "vietnamese-handwriting",
+    description: "how to generate your own handwriting using ml algorithms",
+    category: ["all", "ai"],
+  },
+  {
+    id: "interview-prep-partner",
+    title: "interview-prep-partner",
+    description: "find accountability partner for interview prep",
+    category: ["all", "fullstack"],
   }
 ]
   

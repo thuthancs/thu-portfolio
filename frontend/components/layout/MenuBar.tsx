@@ -6,6 +6,7 @@ export default function MenuBar() {
     { label: "projects", href: "/projects" },
     { label: "creative", href: "/creative" },
     { label: "writing", href: "/writing" },
+    { label: "deep dives", href: "/deep-dives" },
     { label: "curiosity", href: "/curiosity" },
     { label: "contact", href: "/contact" },
   ]

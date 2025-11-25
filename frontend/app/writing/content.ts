@@ -49,19 +49,6 @@ export const writings: Writing[] = [
     category: ["thoughts", "self-improvement"],
   },
   {
-    id: "understanding-react-from-first-principles",
-    title: "understanding react from first principles",
-    description: "this is a pretty long post on how to truly understand react. i've finally decided to sit down, take a deep breath, and read through the original documentation as well as the source code of react. sometimes, what it takes to comprehend something is simply the willingness to do the tedious task of reading code and asking lots of questions.",
-    category: ["technical", "frontend"],
-    date: "2025-11-20",
-  },
-  {
-    id: "learning-the-modern-tech-stack",
-    title: "how to build with the modern tech stack",
-    description: "a comprehensive guide on building applications using the modern tech stack including TypeScript, NodeJS, GraphQL, Prisma, Postgres, NextJS, React, and Relay. and some notes on how to learn things you're not familiar with in a short amount of time.",
-    category: ["technical", "fullstack"],
-  },
-  {
     id: "tidbits-of-life",
     title: "tidbits of life - you cannot pour from an empty cup",
     description: "the past few days have taught me something very important: you cannot pour from an empty cup. i know this wisdom is not something new, but it takes some hands-on experience to actually internalize it. in a nutshell, here is what happened and what i did that has significantly improved my mindset",
@@ -74,22 +61,4 @@ export const writings: Writing[] = [
     description: "every sort of problem is fun and cool as long as you care about it deeply and personally. virality or adoption is probably just a side effect of that. the most personal is the most creative.",
     category: ["thoughts", "reflection"],
   },
-  {
-    id: "neural-nets-from-scratch",
-    title: "neural nets from scratch",
-    description: "understanding the fundamentals of neural networks by building one from scratch",
-    category: ["technical", "ml"],
-  },
-  {
-    id: "convolutional-neural-networks",
-    title: "convolutional neural networks",
-    description: "exploring the architecture and applications of CNNs in image processing",
-    category: ["technical", "ml"],
-  },
-  {
-    id: "k-nearest-neighbors-algorithm",
-    title: "k-nearest-neighbors algorithm",
-    description: "implementation of kNN from scratch in Python",
-    category: ["technical", "ml"],
-  }
 ]
