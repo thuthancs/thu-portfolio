@@ -52,3 +52,7 @@ date: "2025-11-17"
 ### 24 Nov
 
 - remember you can use `appendleft()` to add an item in front of a queue
+
+### 25 Nov
+
+- the difference between `declarative` and `imperative` programming is that the former only requires you to specify _what_ you want (e.g., when you specify what information you want to query from a SQL query or how you want the data is rendered as a grid or list) while the latter requires you to specify the _how_ to get what you want.

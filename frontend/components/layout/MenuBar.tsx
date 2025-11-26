@@ -7,7 +7,7 @@ export default function MenuBar() {
     { label: "creative", href: "/creative" },
     { label: "writing", href: "/writing" },
     { label: "deep dives", href: "/deep-dives" },
-    { label: "curiosity", href: "/curiosity" },
+    { label: "misc", href: "/misc" },
     { label: "contact", href: "/contact" },
   ]
 

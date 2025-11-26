@@ -1,6 +1,6 @@
 import { getAllMarkdownContent, MarkdownContent } from '../../lib/markdown'
 
-export interface Curiosity {
+export interface Misc {
   id: string
   title: string
   description: string
@@ -9,8 +9,8 @@ export interface Curiosity {
   link?: string
 }
 
-// Convert MarkdownContent to Curiosity interface
-function markdownToCuriosity(content: MarkdownContent): Curiosity {
+// Convert MarkdownContent to Misc interface
+function markdownToMisc(content: MarkdownContent): Misc {
   return {
     id: content.id,
     title: content.title,
@@ -21,14 +21,14 @@ function markdownToCuriosity(content: MarkdownContent): Curiosity {
   }
 }
 
-// Get all curiosities from markdown files
-export async function getCuriosities(): Promise<Curiosity[]> {
-  const markdownContent = await getAllMarkdownContent('curiosity')
-  return markdownContent.map(markdownToCuriosity)
+// Get all miscs from markdown files
+export async function getMiscs(): Promise<Misc[]> {
+  const markdownContent = await getAllMarkdownContent('misc')
+  return markdownContent.map(markdownToMisc)
 }
 
 // Fallback static data for when markdown files don't exist
-export const curiosities: Curiosity[] = [
+export const miscs: Misc[] = [
   {
     id: "permute-mississippi",
     title: "how many ways to permute the word mississippi?",

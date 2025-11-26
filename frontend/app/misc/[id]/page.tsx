@@ -1,24 +1,24 @@
 import { notFound } from 'next/navigation'
 import ContentLayout from '../../../components/layout/ContentLayout'
 import { getMarkdownContent } from '../../../lib/markdown'
-import { curiosities } from '../content'
+import { miscs } from '../content'
 
-interface CuriosityDetailProps {
+interface MiscDetailProps {
   params: {
     id: string
   }
 }
 
-export default async function CuriosityDetail({ params }: CuriosityDetailProps) {
+export default async function MiscDetail({ params }: MiscDetailProps) {
   const { id } = await params
   
   // Try to get content from markdown first
-  let markdownContent = await getMarkdownContent('curiosity', id)
+  let markdownContent = await getMarkdownContent('misc', id)
   
   // Fallback to static data if markdown doesn't exist
   if (!markdownContent) {
-    const curiosity = curiosities.find(c => c.id === id)
-    if (!curiosity) {
+    const misc = miscs.find(c => c.id === id)
+    if (!misc) {
       notFound()
     }
     
@@ -32,10 +32,10 @@ export default async function CuriosityDetail({ params }: CuriosityDetailProps) 
 
     const content = `
       <h2 id="introduction">Introduction</h2>
-      <p>This is the introduction to "${curiosity.title}". Here I'll share my thoughts and reflections on this topic.</p>
+      <p>This is the introduction to "${misc.title}". Here I'll share my thoughts and reflections on this topic.</p>
       
       <h2 id="main-content">Main Content</h2>
-      <p>This is where the main content goes. I'll expand on the ideas and concepts related to ${curiosity.title}.</p>
+      <p>This is where the main content goes. I'll expand on the ideas and concepts related to ${misc.title}.</p>
       
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
       
@@ -48,13 +48,13 @@ export default async function CuriosityDetail({ params }: CuriosityDetailProps) 
       </ul>
       
       <h2 id="conclusion">Conclusion</h2>
-      <p>In conclusion, this piece explores ${curiosity.title} and provides insights into the topic. Thank you for reading!</p>
+      <p>In conclusion, this piece explores ${misc.title} and provides insights into the topic. Thank you for reading!</p>
     `
 
     return (
       <ContentLayout
-        title={`./${curiosity.title}`}
-        description={`(n) ${curiosity.description}`}
+        title={`./${misc.title}`}
+        description={`(n) ${misc.description}`}
         sections={sections}
       >
         <div>
@@ -84,10 +84,10 @@ export default async function CuriosityDetail({ params }: CuriosityDetailProps) 
   )
 }
 
-// Generate static params for all curiosities
+// Generate static params for all miscs
 export async function generateStaticParams() {
-  return curiosities.map((curiosity) => ({
-    id: curiosity.id,
+  return miscs.map((misc) => ({
+    id: misc.id,
   }))
 }
 
