@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import WindowControls from "../../components/layout/WindowControls"
+import Sidebar from "../../components/layout/Sidebar"
 
 export default function ContactPage() {
   const [name, setName] = useState("")
@@ -96,89 +96,85 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0] flex items-center justify-center p-8">
-      <div className="w-full max-w-4xl bg-white border-4 border-black rounded-lg shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-        {/* Window header */}
-        <div className="border-b-4 border-black p-4 flex items-center justify-between">
-          <h1 className="text-4xl font-bold">
-            <span className="text-4xl">./contact</span>{" "}
-            <span className="text-xl font-normal align-middle">(n) how to reach me in the infinity of the internet</span>
-          </h1>
-          <WindowControls />
-        </div>
+    <div className="h-screen bg-[#f5f5f0] flex overflow-hidden">
+      <div className="ml-6 mr-4 my-6">
+        <Sidebar active="contact" />
+      </div>
 
-        {/* Window content */}
-        <div className="p-12">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name input */}
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="your name (optional)"
-              className="w-full p-4 text-lg border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black"
-            />
+      <main className="flex-1 py-10 overflow-y-auto">
+        <div className="max-w-5xl mx-auto px-8 pb-10">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold">
+              <span className="text-4xl">./contact</span>{" "}
+              <span className="text-xl font-normal align-middle">
+                (n) how to reach me in the infinity of the internet
+              </span>
+            </h1>
+          </header>
 
-            {/* Email input */}
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your email (optional)"
-              className="w-full p-4 text-lg border-2 border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black"
-            />
+          <div className="space-y-10">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="your name (optional)"
+                className="w-full p-4 text-lg border-2 border-black bg-white focus:outline-none focus:ring-2 focus:ring-black"
+              />
 
-            {/* Message textarea */}
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="leave a message for me... and remember to drink water :)"
-              className="w-full h-64 p-6 text-lg border-2 border-black rounded-none resize-none focus:outline-none focus:ring-2 focus:ring-black"
-              required
-            />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your email (optional)"
+                className="w-full p-4 text-lg border-2 border-black bg-white focus:outline-none focus:ring-2 focus:ring-black"
+              />
 
-            {/* Status message */}
-            {status === "success" && (
-              <div className="p-4 bg-green-100 border-2 border-black text-green-800">
-                ✓ Message sent successfully!
-              </div>
-            )}
-            {status === "error" && (
-              <div className="p-4 bg-red-100 border-2 border-black text-red-800">
-                ✗ Failed to send message. Please try again.
-              </div>
-            )}
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="leave a message for me... and remember to drink water :)"
+                className="w-full h-64 p-6 text-lg border-2 border-black bg-white resize-none focus:outline-none focus:ring-2 focus:ring-black"
+                required
+              />
 
-            {/* Send button */}
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full py-4 text-xl font-bold bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? "sending..." : "send :)"}
-            </button>
-          </form>
+              {status === "success" && (
+                <div className="p-4 bg-green-100 border-2 border-black text-green-800">
+                  ✓ Message sent successfully!
+                </div>
+              )}
+              {status === "error" && (
+                <div className="p-4 bg-red-100 border-2 border-black text-red-800">
+                  ✗ Failed to send message. Please try again.
+                </div>
+              )}
 
-          {/* Social links */}
-          <div className="flex justify-center gap-8 mt-12">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:scale-110 transition-transform"
-                aria-label={link.name}
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full py-4 text-xl font-bold bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {link.icon}
-              </a>
-            ))}
+                {isLoading ? "sending..." : "send :)"}
+              </button>
+            </form>
+
+            <div className="flex justify-center gap-8">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:scale-110 transition-transform"
+                  aria-label={link.name}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Footer */}
-        <div className="border-t-4 border-black p-4"></div>
-      </div>
+      </main>
     </div>
   )
 }

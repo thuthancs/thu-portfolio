@@ -41,8 +41,8 @@
 }
 
 @theme inline {
-  /* Using Quicksand as the primary font */
-  --font-sans: var(--font-quicksand);
+  /* Using Raleway as the primary font */
+  --font-sans: var(--font-raleway);
 
   /* Color tokens */
   --color-window-red: #ff5f56;
