@@ -109,26 +109,41 @@ export default function Sidebar({ active = "about" }: SidebarProps) {
 
               <div>
                 <p className="text-xs font-semibold tracking-wide uppercase text-gray-500 mb-2">Tags</p>
-                <div className="flex items-center gap-2">
+                <Link
+                  href="/world?tag=python"
+                  className="flex items-center gap-2 rounded-full px-2 py-1 text-sm hover:bg-black/5"
+                >
                   <span className="w-3 h-3 rounded-full bg-[#4ba3ff]" />
                   <span>python</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#4ba3ff]" />
-                  <span>javascript</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#4ba3ff]" />
+                </Link>
+                <Link
+                  href="/world?tag=javascript/typescript"
+                  className="flex items-center gap-2 rounded-full px-2 py-1 text-sm hover:bg-black/5"
+                >
+                  <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                  <span>javascript/typescript</span>
+                </Link>
+                <Link
+                  href="/world?tag=ai/ml"
+                  className="flex items-center gap-2 rounded-full px-2 py-1 text-sm hover:bg-black/5"
+                >
+                  <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
                   <span>ai/ml</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#4ba3ff]" />
+                </Link>
+                <Link
+                  href="/world?tag=data"
+                  className="flex items-center gap-2 rounded-full px-2 py-1 text-sm hover:bg-black/5"
+                >
+                  <span className="w-3 h-3 rounded-full bg-[#e88e9a]" />
                   <span>data</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#4ba3ff]" />
+                </Link>
+                <Link
+                  href="/world?tag=misc"
+                  className="flex items-center gap-2 rounded-full px-2 py-1 text-sm hover:bg-black/5"
+                >
+                  <span className="w-3 h-3 rounded-full bg-[#d4d2d2]" />
                   <span>misc.</span>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

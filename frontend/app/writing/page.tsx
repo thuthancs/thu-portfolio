@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 import Sidebar from "../../components/layout/Sidebar"
+import { getTagColorClasses } from "../../lib/utils"
 import type { Writing } from "./content"
 import { writings as fallbackWritings, getWritings } from "./content"
 
@@ -90,18 +91,20 @@ export default function WritingPage() {
                           })}
                         </p>
                       )}
-                      {selectedWriting.category && selectedWriting.category.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {selectedWriting.category.map((cat) => (
-                            <span
-                              key={cat}
-                              className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
-                            >
-                              {cat}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                    {selectedWriting.category && selectedWriting.category.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {selectedWriting.category.map((cat) => (
+                          <span
+                            key={cat}
+                            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border ${getTagColorClasses(
+                              cat
+                            )}`}
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                       <p className="text-sm text-gray-700 max-w-prose">{selectedWriting.description}</p>
                     </div>
 

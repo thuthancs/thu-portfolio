@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 import Sidebar from "../../components/layout/Sidebar"
+import { getTagColorClasses } from "../../lib/utils"
 import type { Project } from "./content"
 import { projects as fallbackProjects, getProjects } from "./content"
 
@@ -104,7 +105,9 @@ export default function ProjectsPage() {
                           {selectedProject.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border ${getTagColorClasses(
+                                tag
+                              )}`}
                             >
                               {tag}
                             </span>

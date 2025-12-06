@@ -1,7 +1,7 @@
 ---
 title: "notion-chrome-extension"
 description: "how to connect notion database with chrome extension to keep track of your leetcode performance"
-category: ["web", "chrome extension"]
+category: ["web", "chrome extension", "python", "javascript/typescript"]
 date: "2024-02-15"
 ---
 

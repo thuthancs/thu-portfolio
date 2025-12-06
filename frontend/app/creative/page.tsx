@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 
 import Sidebar from "../../components/layout/Sidebar"
+import { getTagColorClasses } from "../../lib/utils"
 import type { CreativeProject } from "./content"
 import { creativeProjects as fallbackCreativeProjects, getCreativeProjects } from "./content"
 
@@ -89,7 +90,9 @@ export default function CreativePage() {
                           {selectedProject.categories.map((cat) => (
                             <span
                               key={cat}
-                              className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border ${getTagColorClasses(
+                                cat
+                              )}`}
                             >
                               {cat}
                             </span>

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 import Sidebar from "../../components/layout/Sidebar"
+import { getTagColorClasses } from "../../lib/utils"
 import type { DeepDive } from "./content"
 import { deepDives as fallbackDeepDives, getDeepDives } from "./content"
 
@@ -95,7 +96,9 @@ export default function DeepDivesPage() {
                           {selectedDeepDive.category.map((cat) => (
                             <span
                               key={cat}
-                              className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border ${getTagColorClasses(
+                                cat
+                              )}`}
                             >
                               {cat}
                             </span>
