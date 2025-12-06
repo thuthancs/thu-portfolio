@@ -56,6 +56,8 @@ export default async function WritingDetail({ params }: WritingDetailProps) {
         title={`./${writing.title}`}
         description={`(n) ${writing.description}`}
         sections={sections}
+        backHref="/writing"
+        backLabel="back to blog"
       >
         <div>
           <div 
@@ -73,6 +75,8 @@ export default async function WritingDetail({ params }: WritingDetailProps) {
       title={`./${markdownContent.title}`}
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
+      backHref="/writing"
+      backLabel="back to blog"
     >
       <div>
         <div 

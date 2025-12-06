@@ -56,6 +56,8 @@ export default async function DeepDiveDetail({ params }: DeepDiveDetailProps) {
         title={`./${writing.title}`}
         description={`(n) ${writing.description}`}
         sections={sections}
+        backHref="/deep-dives"
+        backLabel="back to deep dives"
       >
         <div>
           <div 
@@ -73,6 +75,8 @@ export default async function DeepDiveDetail({ params }: DeepDiveDetailProps) {
       title={`./${markdownContent.title}`}
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
+      backHref="/deep-dives"
+      backLabel="back to deep dives"
     >
       <div>
         <div 

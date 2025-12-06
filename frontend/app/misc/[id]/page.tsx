@@ -56,6 +56,8 @@ export default async function MiscDetail({ params }: MiscDetailProps) {
         title={`./${misc.title}`}
         description={`(n) ${misc.description}`}
         sections={sections}
+        backHref="/misc"
+        backLabel="back to misc"
       >
         <div>
           <div 
@@ -73,6 +75,8 @@ export default async function MiscDetail({ params }: MiscDetailProps) {
       title={`./${markdownContent.title}`}
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
+      backHref="/misc"
+      backLabel="back to misc"
     >
       <div>
         <div 

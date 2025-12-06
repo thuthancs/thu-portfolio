@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 import Sidebar from "../../components/layout/Sidebar"
@@ -92,7 +93,11 @@ export default function ProjectsPage() {
                   <div className="flex-1 p-8 flex flex-col gap-6 overflow-y-auto">
                     <div>
                       <h2 className="text-2xl font-semibold mb-2">
-                        {selectedProject.title.replace(/-/g, " ")}
+                        <Link
+                          href={`/projects/${selectedProject.id}`}
+                        >
+                          {selectedProject.title.replace(/-/g, " ")}
+                        </Link>
                       </h2>
                       {selectedProject.tags && selectedProject.tags.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-4">

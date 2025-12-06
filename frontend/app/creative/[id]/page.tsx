@@ -61,6 +61,8 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
         title={`./${creative.title}`}
         description={`(n) ${creative.description}`}
         sections={sections}
+        backHref="/creative"
+        backLabel="back to creative"
       >
         <div>
           <div className="mb-8 text-sm text-gray-600">
@@ -83,6 +85,8 @@ export default async function CreativeDetail({ params }: CreativeDetailProps) {
       title={`./${markdownContent.title}`}
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
+      backHref="/creative"
+      backLabel="back to creative"
     >
       <div>
         <div className="mb-8 text-sm text-gray-600">

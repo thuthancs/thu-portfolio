@@ -64,6 +64,8 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
         title={`./${project.title}`}
         description={`(n) ${project.description}`}
         sections={sections}
+        backHref="/projects"
+        backLabel="back to projects"
       >
         <div>
           <div 
@@ -81,6 +83,8 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
       title={`./${markdownContent.title}`}
       description={`(n) ${markdownContent.description}`}
       sections={markdownContent.sections}
+      backHref="/projects"
+      backLabel="back to projects"
     >
       <div>
         <div 

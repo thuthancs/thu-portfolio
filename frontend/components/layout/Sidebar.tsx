@@ -63,20 +63,20 @@ export default function Sidebar({ active = "about" }: SidebarProps) {
                 Projects
               </Link>
               <Link
-                href="/creative"
-                className={`block w-full text-left px-4 py-2 rounded-full ${
-                  isCreativeActive ? "bg-black text-white font-semibold" : "hover:bg-black/5"
-                }`}
-              >
-                Creative
-              </Link>
-              <Link
                 href="/deep-dives"
                 className={`block w-full text-left px-4 py-2 rounded-full ${
                   isDeepDivesActive ? "bg-black text-white font-semibold" : "hover:bg-black/5"
                 }`}
               >
                 Deep Dives
+              </Link>
+              <Link
+                href="/creative"
+                className={`block w-full text-left px-4 py-2 rounded-full ${
+                  isCreativeActive ? "bg-black text-white font-semibold" : "hover:bg-black/5"
+                }`}
+              >
+                Creative
               </Link>
               <Link
                 href="/writing"

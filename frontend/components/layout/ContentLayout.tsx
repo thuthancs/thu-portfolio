@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from 'react'
+import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
 
 interface ContentSection {
   id: string
@@ -13,10 +14,33 @@ interface ContentLayoutProps {
   description: string
   sections: ContentSection[]
   children: React.ReactNode
+  backHref?: string
+  backLabel?: string
 }
 
-export default function ContentLayout({ title, description, sections, children }: ContentLayoutProps) {
-  const [activeSection, setActiveSection] = useState('')
+function getBackLink(title: string): { href: string; label: string } | null {
+  // Titles come in like "./projects" or "./notion-chrome-extension"
+  const base = title.replace("./", "").split(" ")[0]
+
+  if (base === "projects") return { href: "/projects", label: "back to projects" }
+  if (base === "creative") return { href: "/creative", label: "back to creative" }
+  if (base === "deep-dives") return { href: "/deep-dives", label: "back to deep dives" }
+  if (base === "blog") return { href: "/writing", label: "back to blog" }
+  if (base === "writing") return { href: "/writing", label: "back to blog" }
+  if (base === "misc") return { href: "/misc", label: "back to misc" }
+
+  return null
+}
+
+export default function ContentLayout({
+  title,
+  description,
+  sections,
+  children,
+  backHref,
+  backLabel,
+}: ContentLayoutProps) {
+  const [activeSection, setActiveSection] = useState("")
   const observer = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
@@ -28,7 +52,7 @@ export default function ContentLayout({ title, description, sections, children }
           }
         })
       },
-      { rootMargin: '0px 0px -70% 0px' }
+      { rootMargin: "0px 0px -70% 0px" }
     )
 
     const elements = sections.map((section) => document.getElementById(section.id)).filter(Boolean) as Element[]
@@ -40,11 +64,21 @@ export default function ContentLayout({ title, description, sections, children }
   }, [sections])
 
   const hasTableOfContents = sections && sections.length > 0
+  const backLink = backHref
+    ? { href: backHref, label: backLabel ?? "back" }
+    : getBackLink(title)
 
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-2">
+          {backLink && (
+            <div className="mb-4 text-sm">
+              <Link href={backLink.href} className="underline">
+                ← {backLink.label}
+              </Link>
+            </div>
+          )}
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl font-bold">{title}</h1>
             <p className="text-xl font-normal mt-2">{description}</p>
@@ -62,10 +96,10 @@ export default function ContentLayout({ title, description, sections, children }
                     href={`#${section.id}`}
                     className={`block text-sm transition-colors ${
                       activeSection === section.id
-                        ? 'text-[#3E80D3] font-bold'
-                        : 'hover:text-[#3E80D3]'
+                        ? "text-[#3E80D3] font-bold"
+                        : "hover:text-[#3E80D3]"
                     } ${
-                      section.level === 1 ? 'font-medium' : 'ml-4 text-gray-600'
+                      section.level === 1 ? "font-medium" : "ml-4 text-gray-600"
                     }`}
                   >
                     {section.title}
