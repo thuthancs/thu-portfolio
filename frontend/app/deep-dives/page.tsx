@@ -69,57 +69,67 @@ export default function DeepDivesPage() {
             {/* Preview pane */}
             <section className="flex-1 min-h-[600px] bg-white border-2 border-grey rounded-3xl flex flex-col overflow-hidden">
               {selectedDeepDive ? (
-                <div className="flex-1 p-8 flex flex-col gap-6 overflow-y-auto">
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-2">{selectedDeepDive.title}</h2>
-                    {selectedDeepDive.date && (
-                      <p className="text-xs text-gray-500 mb-2">
-                        {new Date(selectedDeepDive.date).toLocaleDateString(undefined, {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </p>
-                    )}
-                    {selectedDeepDive.category && selectedDeepDive.category.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {selectedDeepDive.category.map((cat) => (
-                          <span
-                            key={cat}
-                            className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
-                          >
-                            {cat}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    <p className="text-sm text-gray-700 max-w-prose">
-                      {selectedDeepDive.description}
-                    </p>
+                <>
+                  {/* Placeholder preview area */}
+                  <div className="border-b-2 border-grey bg-black/5">
+                    <div className="h-64 flex items-center justify-center text-sm text-gray-500">
+                      preview coming soon
+                    </div>
                   </div>
 
-                  <div className="text-sm">
-                    <Link
-                      href={`/deep-dives/${selectedDeepDive.id}`}
-                      className="underline font-medium hover:text-black"
-                    >
-                      read full deep dive
-                    </Link>
-                    {selectedDeepDive.link && (
-                      <>
-                        <span className="mx-2 text-gray-400">·</span>
-                        <a
-                          href={selectedDeepDive.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline font-medium hover:text-black"
-                        >
-                          external link
-                        </a>
-                      </>
-                    )}
+                  {/* Content */}
+                  <div className="flex-1 p-8 flex flex-col gap-6 overflow-y-auto">
+                    <div>
+                      <h2 className="text-2xl font-semibold mb-2">{selectedDeepDive.title}</h2>
+                      {selectedDeepDive.date && (
+                        <p className="text-xs text-gray-500 mb-2">
+                          {new Date(selectedDeepDive.date).toLocaleDateString(undefined, {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </p>
+                      )}
+                      {selectedDeepDive.category && selectedDeepDive.category.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {selectedDeepDive.category.map((cat) => (
+                            <span
+                              key={cat}
+                              className="inline-flex items-center rounded-full bg-[#f5f5f0] px-3 py-1 text-xs font-medium border border-gray-300"
+                            >
+                              {cat}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <p className="text-sm text-gray-700 max-w-prose">
+                        {selectedDeepDive.description}
+                      </p>
+                    </div>
+
+                    <div className="text-sm">
+                      <Link
+                        href={`/deep-dives/${selectedDeepDive.id}`}
+                        className="underline font-medium hover:text-black"
+                      >
+                        read full deep dive
+                      </Link>
+                      {selectedDeepDive.link && (
+                        <>
+                          <span className="mx-2 text-gray-400">·</span>
+                          <a
+                            href={selectedDeepDive.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline font-medium hover:text-black"
+                          >
+                            external link
+                          </a>
+                        </>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </>
               ) : null}
             </section>
           </div>
