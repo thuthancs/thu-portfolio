@@ -8,10 +8,10 @@ export default function MenuBar() {
   const pathname = usePathname();
 
   const isProjects = pathname?.startsWith("/projects");
-  const isContact = pathname?.startsWith("/contact");
+  const isDesign = pathname?.startsWith("/design-manifesto");
   const isBlog = pathname?.startsWith("/blog");
   const isMisc = pathname?.startsWith("/misc");
-  const isAbout = pathname === "/" && !isProjects && !isContact && !isBlog && !isMisc;
+  const isAbout = pathname === "/" && !isProjects && !isDesign && !isBlog && !isMisc;
 
   const linkClass = (active) =>
     active ? "text-black" : "text-[#666666] hover:text-black";
@@ -30,7 +30,7 @@ export default function MenuBar() {
           </Link>
         </li>
         <li>
-          <Link href="/contact" className={linkClass(isContact)}>
+          <Link href="/design-manifesto" className={linkClass(isDesign)}>
             Design
           </Link>
         </li>
