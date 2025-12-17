@@ -15,16 +15,16 @@ export default function HomePage() {
 
           {/* Introduction */}
           <div className="mb-16 md:mb-20 max-w-4xl">
-            <p className="mb-8">
+            <p className="mb-8 text-[20px]">
               I&apos;m Thu. <strong className="text-black">Design Engineer</strong>.
             </p>
-            <p>
+            <p className="mb-8 text-[20px]">
               I build tools and educational materials that help people and organizations{" "}
               <strong className="text-black">leverage data</strong> to make informed decisions, augment human{" "}
               <strong className="text-black">productivity and creativity</strong>, as well as{" "}
               <strong className="text-black">understand</strong> the world a little bit better.
             </p>
-            <p className="mt-8">
+            <p className="mt-8 text-[20px]">
               Currently <strong className="text-black">designing data tools</strong> to advance{" "}
               <strong className="text-black">academic success</strong> at Minerva and building{" "}
               <strong className="text-black">a game-based RL learning platform</strong> for beginners.
