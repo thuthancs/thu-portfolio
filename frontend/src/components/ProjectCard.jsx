@@ -31,12 +31,6 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
           <p className="description">{summary}</p>
         </div>
       </article>
-
-      {/* Corner squares */}
-      <span className="project-card-corner project-card-corner--tl" />
-      <span className="project-card-corner project-card-corner--tr" />
-      <span className="project-card-corner project-card-corner--bl" />
-      <span className="project-card-corner project-card-corner--br" />
     </div>
   );
 
