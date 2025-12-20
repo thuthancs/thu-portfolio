@@ -194,7 +194,7 @@
   }
 
   .detail-toc a:hover {
-    font-weight: 600;
+    color:#3b82f6;
   }
 
   .detail-toc-link {
@@ -207,7 +207,7 @@
   }
 
   .detail-toc-link--active {
-    font-weight: 600;
+    font-weight: 500;
     border-left-color: #000;
   }
 
@@ -260,7 +260,10 @@
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* Keep content aligned from the top so headings line up
+       consistently across cards, regardless of content length. */
+    justify-content: flex-start;
+    gap: 16px;
     background-color: #fff;
     height: 100%;
   }
@@ -319,7 +322,7 @@
   .section-filter-button {
     padding: 6px 16px;
     border-radius: 2px;
-    border: 1px dashed #000;
+    border: 1px solid #e5e7eb;
     background-color: #fff;
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -331,6 +334,7 @@
 
   .section-filter-button:hover {
     border-style: solid;
+    border-color: #000; /* on hover: black border */
   }
 
   .section-filter-button--active {

@@ -15,7 +15,7 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
               alt={title}
               width={600}
               height={400}
-              className="w-full h-auto object-cover"
+              className="w-full h-[240px] object-cover"
             />
           )}
         </div>

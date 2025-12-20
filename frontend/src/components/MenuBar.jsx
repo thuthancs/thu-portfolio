@@ -30,13 +30,13 @@ export default function MenuBar() {
           </Link>
         </li>
         <li>
-          <Link href="/design-manifesto" className={linkClass(isDesign)}>
-            Design
+          <Link href="/blog" className={linkClass(isBlog)}>
+            Blog
           </Link>
         </li>
         <li>
-          <Link href="/blog" className={linkClass(isBlog)}>
-            Blog
+          <Link href="/design-manifesto" className={linkClass(isDesign)}>
+            Design
           </Link>
         </li>
         <li>
