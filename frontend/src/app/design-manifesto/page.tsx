@@ -5,8 +5,7 @@ const TOC = [
   { id: "design-for-people", label: "Design for people, not your ego", depth: 1 },
   { id: "design-to-solve-problems", label: "Design to solve problems", depth: 1 },
   { id: "design-as-playground", label: "Design as a playground", depth: 1 },
-  { id: "clarity-over-aesthetics", label: "Clarity over aesthetics", depth: 1 },
-  { id: "its-all-about-the-details", label: "It's all about the details", depth: 1 },
+  { id: "design-as-a-craft", label: "Design as a craft", depth: 1 },
 ];
 
 export default function DesignManifestoPage() {
@@ -23,9 +22,7 @@ export default function DesignManifestoPage() {
         <p>Design is not just about making things look pretty. Design is about crafting a solution to a specific problem.</p>
         <h3 id="design-as-playground">Design as a playground</h3>
         <p>Design should be iterative and fun, like a playground where we experiment with new ideas and keep improving them. A playground consists of people, hence design should collaborative in and of itself.</p>
-        <h3 id="clarity-over-aesthetics">Clarity over aesthetics</h3>
-        <p>Before any styling, think about the meaning of your text and the purpose of your website or product and then decide your design on that core, not the other way around.</p>
-        <h3 id="its-all-about-the-details">It&apos;s all about the details</h3>
+        <h3 id="design-as-a-craft">Design as a craft</h3>
         <p>Things that people don&apos;t see but will notice when they are off - the padding, margin, letter spacing, the message, the color, the consistency. </p>
       </section>
     </DetailPage>
