@@ -24,7 +24,7 @@ const projects: ProjectMetaData[] = [
     title: "RL Game Tutorials",
     summary:
       "Interactive tutorials introducing RL concepts through simple games like snake and flappy bird.",
-    thumbnail: "/project_previews/rl_games_algos.png",
+    thumbnail: "/project_previews/rl.png",
     tags: ["javascript", "python", "react"],
     featured: true,
   },

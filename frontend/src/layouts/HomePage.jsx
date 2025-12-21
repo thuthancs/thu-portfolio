@@ -35,12 +35,12 @@ export default function HomePage() {
         {/* Right Column - Portrait */}
         <div className="relative">
           <Image
-            src="/portrait_frame.png"
+            src="/portrait.jpeg"
             alt="Profile Picture"
             width={240}
             height={480}
             sizes="(min-width: 1024px) 240px, 40vw"
-            className="w-40 md:w-52 lg:w-60 h-auto mx-auto"
+            className="w-40 md:w-52 lg:w-60 h-auto mx-auto rounded-[8px]"
             priority
           />
           {/* Social Links */}

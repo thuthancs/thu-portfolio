@@ -189,12 +189,12 @@
   }
 
   .detail-toc a {
-    color: #000;
+    color: #6b7280; /* gray by default for all TOC items */
     text-decoration: none;
   }
 
   .detail-toc a:hover {
-    color:#3b82f6;
+    color: #3b82f6; /* hover: black */
   }
 
   .detail-toc-link {
@@ -206,9 +206,9 @@
     font-size: 14px;
   }
 
-  .detail-toc-link--active {
-    font-weight: 500;
-    border-left-color: #000;
+  .detail-toc a.detail-toc-link--active {
+    color: #3b82f6; /* active section: black text */
+    border-left-color: #3b82f6;
   }
 
   .detail-content {
@@ -256,6 +256,7 @@
   .project-card {
     position: relative;
     border: 1px solid #e5e7eb; /* gray-200, to match BlogCard ring-gray-200 */
+    border-radius: 8px;
     padding: 16px;
     min-height: 300px;
     display: flex;

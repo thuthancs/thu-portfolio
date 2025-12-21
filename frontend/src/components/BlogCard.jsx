@@ -11,7 +11,7 @@ import "../app/globals.css";
  */
 export default function BlogCard({ date, title, href }) {
   const content = (
-    <article className="flex items-center justify-between px-6 py-3 ring-1 ring-gray-200 hover:ring-black">
+    <article className="flex items-center justify-between px-6 py-3 ring-1 ring-gray-200 hover:ring-black rounded-[8px]">
       <p className="text-gray-500 flex items-center mt-0">
         {date}
       </p>
