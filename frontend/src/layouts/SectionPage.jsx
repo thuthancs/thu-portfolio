@@ -23,6 +23,7 @@ const PROJECT_CATEGORIES = {
   "grading-dashboard": ["featured", "webapp"],
   "rl-game-learning": ["featured", "ai-ml"],
   "climate-perception-and-policy": ["data-analysis"],
+  "recursive-tree": ["creative-coding"],
 };
 
 export default function SectionPage() {

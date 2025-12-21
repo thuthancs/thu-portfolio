@@ -29,6 +29,15 @@ const projects: ProjectMetaData[] = [
     featured: true,
   },
   {
+    slug: "recursive-tree",
+    title: "Recursive Tree",
+    summary:
+      "Creative-coding visualization that renders a branching recursive tree using python",
+    thumbnail: "/project_previews/recursive_trees.png",
+    tags: ["nature", "python"],
+    featured: false,
+  },
+  {
     slug: "climate-perception-and-policy",
     title: "Climate Perception and Policy",
     summary:
