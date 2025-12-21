@@ -7,6 +7,7 @@ const TAG_COLORS = {
     "d3.js": "#DE744D",
     automation: "#10A958",
     climate: "#10A958",
+    nature: "#10A958",
     r: "#2268BB",
     research: "#F5F5F5",
     "social impact": "#FEFFD4",

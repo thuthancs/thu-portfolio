@@ -11,6 +11,7 @@ const TOC = [
   { id: "future-directions", label: "Future Directions" },
   { id: "research-question", label: "Research Question", depth: 1 },
   { id: "proposed-methods", label: "Proposed Methods", depth: 1 },
+  { id: "thought-process", label: "Source Code & Thought Process" },
   { id: "references", label: "References" },
 ];
 
@@ -30,7 +31,7 @@ export default function ClimatePerceptionAndPolicyPage() {
       <section id="abstract">
         <h2>Abstract</h2>
         <p>
-          This report utilizes two primary datasets: Yale Climate Opinion Maps 2024 (YCOM) and Howe et al. (2016). The full YCOM 2024 dataset enables longitudinal analysis of shifts in public opinion over time.
+          This report utilizes two primary datasets: Yale Climate Opinion Maps 2024 and Howe et al. (2016). The full YCOM 2024 dataset enables longitudinal analysis of shifts in public opinion over time.
         </p>
         <p className="mt-8">
           While the YCOM model provides fine-grained public opinion insights across locations and demographics, it does not by default support temporal comparisons. This analysis fills that gap by examining changes in macro-level U.S. climate opinion from 2016 to 2024.
@@ -40,7 +41,7 @@ export default function ClimatePerceptionAndPolicyPage() {
       <section id="insights">
         <h2>Insights</h2>
         <h3 id="insights-1">
-          Rising awareness of climate change does not directly translate into support for mitigating policies
+          Rising awareness of climate change does not directly translate into support for mitigation policies
         </h3>
         <figure>
           <Image
@@ -53,7 +54,7 @@ export default function ClimatePerceptionAndPolicyPage() {
           <figcaption>
             <strong>Figure 1.</strong> National trends in public support for selected policies, 2016–2024.
             The y-axis shows the proportion of respondents expressing support; each line is a unique policy.
-            Discontinuities represent years when a policy wasn't surveyed. The two oil drilling items (red) show increasing support, contrasting with unchanged or declining trends for other policies.
+            Discontinuities represent years when a policy was not surveyed. The two oil drilling items (red) show increasing support, contrasting with unchanged or declining trends for other policies.
           </figcaption>
         </figure>
         <figure>
@@ -114,7 +115,7 @@ export default function ClimatePerceptionAndPolicyPage() {
           These trends seem contradictory: greater awareness and concern would normally predict stronger policy support, especially since CO₂ is the main greenhouse gas and renewables a solution. As seen in Figure 4, some states (Arizona, Oregon, Nevada, Minnesota, Massachusetts, North Carolina, Florida) actually increased support for CO₂ regulation—suggesting state-level divergence worth further investigation.
         </p>
         <h3 id="insights-2">
-          Which variables are most strongly correlated with support for climate policies?
+          Risk perceptions are strongly correlated with policy support, but the strength of these links varies by perception type
         </h3>
         <figure>
           <Image
@@ -165,6 +166,14 @@ export default function ClimatePerceptionAndPolicyPage() {
         <p>
           Expectation: those who view renewables/regulation as economically beneficial to their communities will show matched concern and policy support; those who view them as a threat will express “dissonance.” Implication: effective climate communication should emphasize local economic opportunities and tangible co-benefits, not just risks. Combining behavioral and economic perspectives will bridge the gap between trend data and real-life motivation.
         </p>
+      </section>
+      <section id="thought-process">
+        <h2>Source Code & Thought Process</h2>
+        <p>All R code used for this analysis can be found <a href="https://github.com/thuthancs/research-data-analysis" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p>I identified 2 primary questions I wanted to answer and used different data analysis techniques to answer them. Firstly, I used a time-series data, plotted in a line graph to see how the percentage of people supporting different policies changed over time on a national level. To do this, I created a function to calculate the averages for each variable-year pair and highlighted notable trends. Secondly, I used a U.S map to plot the percentage differences between 2024 and 2016 to answer the same question to see how public opinions or risk perceptions have changed over time. This type of analysis provides me with a high-level overview across states of whether there is an increase or decrease in certain variables. Lastly, I used a regression correlation technique to analyze which risk perception variable is most correlated with a certain policy. This type of analysis offers me insights into which independent variable (risk perception) is consistently correlated with support for all policies or which one is highly correlated of a specific policy. All of the analyses are conducted in R with popular packages such as ggplot, tidyverse, and dplyr.</p>
+        <p>I used <strong>#dataviz</strong> to write descriptive captions for all the plots, decide on the appearance of the plot that is easy to read for my audience (i.e., it should not contain too much information or color that makes it hard for us to spot the trend), and naming of the legends/labels. For example, in Figure 1, I used a line plot to show how the public opinions have changed in supporting different climate-related policies. There are 9 such policies and letting R automatically generating different colors for each policy would create too much information to absorb in a graph and it is also extremely hard to see. As a result, since I noticed a pattern that almost all other policies have seen a decline or no change, except for 2 drilling oil policies, I decided to color them in red and leave other lines as grey. By this way, a striking pattern becomes much more noticeable. I also rename the variable to be more human-readable instead of keeping the original variable name.</p>
+        <p>I applied <strong>#gapanalysis</strong> consistently throughout the data analysis process to identify gaps in the current dataset and methods, and to determine the type of analyses to conduct or the method to propose for building upon the existing literature. For example, when I looked at the YCOM2024 dataset, I realized that even though the dataset is very fine-grained and I can choose a specific state to see the percentage in different variables and hover over the state to see a line graph over time, it does not immediately give me an answer of whether the public has become more aware or worried about global warming or more supportive of climate change policies. As a result, I added another perspective by computing the difference between two years across states, allowing me to immediately notice where things changed in all states or if there was any polarization. I also applied this HC to help me develop the methodology proposal by identifying what’s missing from the current quantitative datasets and which questions they fail to answer that necessitates more qualitative data. </p>
+        <p>I used AI, specifically Claude, extensively to help me with the coding in R and I think this is the part where AI was very helpful to me. First of all, because it saved me so much time from being bogged down by logistical details of how to implement something in R such as renaming column names, extracting a subset of data and creating a plot. Secondly, when I made all the decisions beforehand, such as what questions I am trying to answer, how I envision my dataset to look like (i.e., what variables to include and what extra columns to created), and what kind of plots I want to make as well as their appearance (i.e., color choice, shapes, and legend labels), AI helped me become more productive because I know exactly what to actually ask it to do for me, and it allows me to dedicate my energy and time thinking about what’s most important: the insights, gaps, and potential methods. If I am proficient in R, then I think I don’t even need to use AI but because I’m still uncomfortable with the language, I decided to use it in this assignment so I can focus more on the research skills, instead of the programming skills.</p>
       </section>
 
       <section id="references">

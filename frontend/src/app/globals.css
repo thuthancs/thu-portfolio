@@ -18,6 +18,26 @@
     font-size: 24px;
   }
 
+  /* On medium/smaller screens, gently scale down headings and body text
+     so the overall layout feels smaller without changing card/grid logic. */
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
   p {
     color: #000000;
     font-size: 16px;
@@ -64,20 +84,28 @@
     box-sizing: content-box;
   }
 
-  /* Home layout shell – outer margins controlled in px */
+  /* Home layout shell
+     - Centers content with a max-width so it looks good on large screens
+     - Uses responsive horizontal padding instead of very large fixed margins,
+       so margins naturally shrink as the viewport gets smaller without
+       changing the internal components (cards, paragraphs, etc.). */
   .home-shell {
-    margin: 16px; /* top, right/left, bottom on small screens */
+    max-width: 1120px;
+    margin: 16px auto 32px;
+    padding: 0 16px;
   }
 
   @media (min-width: 768px) {
     .home-shell {
-      margin: 48px 80px 48px;
+      margin: 32px auto 40px;
+      padding: 0 32px;
     }
   }
 
   @media (min-width: 1024px) {
     .home-shell {
-      margin: 48px 224px 32px;
+      margin: 48px auto 40px;
+      padding: 0 48px;
     }
   }
 
