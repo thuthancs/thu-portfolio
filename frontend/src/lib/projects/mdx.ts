@@ -38,6 +38,15 @@ const projects: ProjectMetaData[] = [
     featured: false,
   },
   {
+    slug: "one-shape-one-color",
+    title: "One Shape, One Color",
+    summary:
+      "First prompt of Genuary Art.",
+    thumbnail: "/project_previews/genuary1.png",
+    tags: ["art", "python"],
+    featured: false,
+  },
+  {
     slug: "climate-perception-and-policy",
     title: "Climate Perception and Policy",
     summary:
