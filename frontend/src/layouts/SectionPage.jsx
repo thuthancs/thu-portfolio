@@ -24,6 +24,7 @@ const PROJECT_CATEGORIES = {
   "rl-game-learning": ["featured", "ai-ml"],
   "climate-perception-and-policy": ["data-analysis"],
   "recursive-tree": ["creative-coding"],
+  "one-shape-one-color": ["creative-coding"],
 };
 
 export default function SectionPage() {
