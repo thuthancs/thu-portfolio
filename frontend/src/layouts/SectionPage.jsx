@@ -21,7 +21,7 @@ const FILTERS = [
 const PROJECT_CATEGORIES = {
   "notion-chrome-extension": ["featured", "webapp"],
   "grading-dashboard": ["featured", "webapp"],
-  "rl-game-learning": ["featured", "webapp", "simulation", "ai-ml"],
+  "rl-game-learning": ["featured", "ai-ml"],
   "climate-perception-and-policy": ["data-analysis"],
 };
 
