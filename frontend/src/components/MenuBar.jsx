@@ -8,7 +8,7 @@ export default function MenuBar() {
   const pathname = usePathname();
 
   const isProjects = pathname?.startsWith("/projects");
-  const isDesign = pathname?.startsWith("/design-manifesto");
+  const isDesign = pathname?.startsWith("/design");
   const isBlog = pathname?.startsWith("/blog");
   const isMisc = pathname?.startsWith("/misc");
   const isAbout = pathname === "/" && !isProjects && !isDesign && !isBlog && !isMisc;
@@ -30,13 +30,13 @@ export default function MenuBar() {
           </Link>
         </li>
         <li>
-          <Link href="/blog" className={linkClass(isBlog)}>
-            Blog
+          <Link href="/design" className={linkClass(isDesign)}>
+            Design
           </Link>
         </li>
         <li>
-          <Link href="/design-manifesto" className={linkClass(isDesign)}>
-            Design
+          <Link href="/blog" className={linkClass(isBlog)}>
+            Blog
           </Link>
         </li>
         <li>

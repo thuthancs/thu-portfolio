@@ -3,6 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import "../app/globals.css";
 
+/**
+ * @param {{
+ *   thumbnail?: string;
+ *   title: string;
+ *   tags?: string[];
+ *   summary: string;
+ *   href?: string;
+ * }} props
+ */
 export default function ProjectCard({ thumbnail, title, tags = [], summary, href }) {
   const card = (
     <div className="project-card-frame">
