@@ -4,5 +4,6 @@ export type ProjectMetaData = {
     summary: string;
     thumbnail: string;
     tags: string[];
+    href?: string;
     featured?: boolean;
 }

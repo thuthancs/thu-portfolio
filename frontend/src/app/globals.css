@@ -298,6 +298,16 @@
     transition: border-color 0.15s ease;
   }
 
+  /* Tighten spacing inside project cards so titles sit closer to images */
+  .project-card p {
+    margin-top: 2px;
+  }
+
+  .project-card .highlight {
+    margin-top: 2px; /* small offset from image instead of full paragraph spacing */
+    margin-bottom: 8px;
+  }
+
   .project-card-frame:hover .project-card {
     border-color: #000; /* on hover: black border, similar to BlogCard hover:ring-black */
   }

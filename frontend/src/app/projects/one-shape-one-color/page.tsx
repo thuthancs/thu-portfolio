@@ -22,7 +22,7 @@ export default function RecursiveTreePage() {
   return (
     <DetailPage title={project.title} tags={project.tags} summary={project.summary} toc={TOC}>
       <section id="overview">
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
+        <div className="flex justify-center gap-4 mb-6">
           <Image
             src="/projects/creative_coding/one_shape_one_color.png"
             alt="One shape one color"

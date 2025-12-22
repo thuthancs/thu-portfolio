@@ -12,6 +12,7 @@ const TAG_COLORS = {
     research: "#F5F5F5",
     "social impact": "#FEFFD4",
     culture: "#FFD4E7",
+    "graphic design": "#FFD4E7",
   };
   
   function getTagColor(tag) {
