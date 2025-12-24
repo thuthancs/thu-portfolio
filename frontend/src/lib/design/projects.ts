@@ -8,7 +8,7 @@ const designProjects: ProjectMetaData[] = [
     title: "Design Manifesto",
     summary: "A work-in-progress set of guiding principles behind my design practice.",
     thumbnail: "/project_previews/design_manifesto.JPG",
-    tags: ["design"],
+    tags: ["manifesto"],
     href: "/design/design-manifesto",
   }, 
   {
@@ -16,7 +16,7 @@ const designProjects: ProjectMetaData[] = [
     title: "Redesign Hiroshi Ramen Menu",
     summary: "A visual redesign of Hiroshi Ramen's menu to improve readability and hierarchy.",
     thumbnail: "/design/ramen_hiroshi_redesigned_menu.png",
-    tags: ["graphic design"],
+    tags: ["graphic"],
     href: "/design/menu-redesign",
   },
 ];

@@ -57,13 +57,12 @@ export default function MenuRedesignPage() {
         <p>Finally, the <strong>layout</strong> of the menu is very cluttered and does not support me in finding the information I want using eye-scanning patterns such as Z or F.</p>
         <h3 id="decisions">Design Decisions</h3>
         <p><strong>Visual Hierarchy</strong>: I established a clear visual hierarchy where the title of the dish and its price have a bigger font size (11.5 px) with greater weight (bold) compared to the description of the ingredients (8.5px and light).</p>
-        <p><strong>Cognitive Load</strong>: I shortened the description by removing all the adjective expression about the dish and keeping only the nouns that represent the ingredients.</p>
-        <p><strong></strong>: I ensured consistency by adding an image for each dish, except for the vegetarian options because they represent the same dishes just with different ingredients.</p>
-        <p>Finally, I made two decisions regarding the layout choices based on the number of dishes of each category: 1) for the pork-based ramen broth, because there are 4 dishes, 
+        <p><strong>Cognitive Load</strong>: I shortened the description by removing all the adjective expression about the dish and keeping only the nouns that represent the ingredients. I also ordered the options based on the prices so that customers can quickly scan which option is the cheapeast and which one is the most expensive.</p>
+        <p><strong>Consistency</strong>: I ensured consistency by adding an image for each dish, except for the vegetarian options because they represent the same dishes just with different ingredients.</p>
+        <p><strong>Layout</strong>: I made two decisions regarding the layout choices based on the number of dishes of each category: 1) for the pork-based ramen broth, because there are 4 dishes, 
             I decided to use a two-column layout to save space and create balance, 2) for the chicken-based options, because there are only 4 dishes, I used a single-column layout to avoid creating an empty space,
             and 3) for the vegetarian and extras sections, I used a single-column layout to create a sense of simplicity.
         </p>
-        <p>I also ordered the options based on the prices so that customers can quickly scan which option is the cheapeast and which one is the most expensive.</p>
       </section>
     </DetailPage>
   );
