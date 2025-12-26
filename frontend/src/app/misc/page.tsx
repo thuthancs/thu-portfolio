@@ -47,7 +47,7 @@ export default function MiscPage() {
           </li>
           <li>
             <label className="flex items-center gap-2">
-              <input type="checkbox" /> Redesign Hiroshi Ramen menu and website and actually go there and give the menu to them
+              <input type="checkbox" defaultChecked /> <s>Redesign Hiroshi Ramen menu</s> and website and actually go there and give the menu to them
             </label>
           </li>
           <li>
@@ -77,7 +77,7 @@ export default function MiscPage() {
           </li>
           <li>
             <label className="flex items-center gap-2">
-              <input type="checkbox" /> DM <a href="https://maryrosecook.com/">Mary Rose</a> Cook for a coffee chat
+              <input type="checkbox" /> DM <a href="https://maryrosecook.com/">Mary Rose Cook</a> for a coffee chat
             </label>
           </li>
           <li>
@@ -92,7 +92,7 @@ export default function MiscPage() {
           </li>
           <li>
             <label className="flex items-center gap-2">
-              <input type="checkbox" /> Reach out to <a href="https://jchenwan.com/">Joanna</a>about hosting a Figma event for Minerva students
+              <input type="checkbox" defaultChecked/> <s>Reach out to <a href="https://jchenwan.com/">Joanna</a>about hosting a Figma event for Minerva students </s> (waiting for Joanna&apos;s response)
             </label>
           </li>
           <li>
@@ -218,6 +218,26 @@ export default function MiscPage() {
           <li>
             <label className="flex items-center gap-2">
               <input type="checkbox" /> Finish <a href="https://natureofcode.com/">The Nature of Code</a>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Finish Guns, Germs, and Steel
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Implement a text editor
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Develop Dear Data Project but a digital version
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Complete 31 days of Genuary 2026
             </label>
           </li>
         </ul>

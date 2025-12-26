@@ -25,6 +25,7 @@ const PROJECT_CATEGORIES = {
   "climate-perception-and-policy": ["data-analysis"],
   "recursive-tree": ["creative-coding"],
   "one-shape-one-color": ["creative-coding"],
+  "principles-animation": ["creative-coding"],
 };
 
 export default function SectionPage() {

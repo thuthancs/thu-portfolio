@@ -47,6 +47,15 @@ const projects: ProjectMetaData[] = [
     featured: false,
   },
   {
+    slug: "principles-animation",
+    title: "12 Principles of Animation",
+    summary:
+      "Second prompt of Genuary Art.",
+    thumbnail: "/project_previews/bouncing_ball.gif",
+    tags: ["animation", "python"],
+    featured: false,
+  },
+  {
     slug: "climate-perception-and-policy",
     title: "Climate Perception and Policy",
     summary:

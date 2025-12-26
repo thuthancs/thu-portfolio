@@ -14,6 +14,8 @@ const TAG_COLORS = {
     manifesto: "#FEFFD4",
     culture: "#FFD4E7",
     graphic: "#FFD4E7",
+    art: "#FFD4E7",
+    animation: "#FFA500"
   };
   
   function getTagColor(tag) {
