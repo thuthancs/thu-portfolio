@@ -2,6 +2,7 @@ import DetailPage from "@/layouts/DetailPage";
 
 const TOC = [
   { id: "hobbies", label: "Hobbies" },
+  { id: "side-quests", label: "Side Quests" },
   { id: "list-100", label: "List 100" },
 ];
 
@@ -27,7 +28,7 @@ export default function MiscPage() {
               I also love drawing so I document my progress of imperfect work{" "}
               <a
                 className="hover:text-blue-500"
-                href="https://www.instagram.com/joyfuldrawing_/"
+                href="https://www.instagram.com/thu.sketches/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -38,6 +39,10 @@ export default function MiscPage() {
             <li>Currently rekindling my love for origami and reading</li>
             <li>Sometimes I play chess</li>
           </ul>
+        <h3 id="side-quests">Side Quests</h3>
+        <ul className="list-disc pl-6 space-y-2 font-light">
+          <li>Ran a pop-up lunch business in 3 days in SF and got 10 orders :)</li>
+        </ul>
         <h3 id="list-100">List 100</h3>
         <ul className="list-none pl-0 space-y-2 font-light">
           <li>
@@ -92,7 +97,7 @@ export default function MiscPage() {
           </li>
           <li>
             <label className="flex items-center gap-2">
-              <input type="checkbox" defaultChecked/> <s>Reach out to <a href="https://jchenwan.com/">Joanna</a>about hosting a Figma event for Minerva students </s> (waiting for Joanna&apos;s response)
+              <input type="checkbox" defaultChecked /> <s>Reach out to <a href="https://jchenwan.com/">Joanna</a> about hosting a Figma event for Minerva students</s> (waiting for Joanna&apos;s response &rarr; she responded yay!)
             </label>
           </li>
           <li>
@@ -237,7 +242,17 @@ export default function MiscPage() {
           </li>
           <li>
             <label className="flex items-center gap-2">
-              <input type="checkbox" /> Complete 31 days of Genuary 2026
+              <input type="checkbox" /> Complete 31 days of Genuary 2026 (6 days completed, 25 to go!)
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Create a Spotify Wrap version for DataHub Team
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" /> Finish Figma Learn
             </label>
           </li>
         </ul>
