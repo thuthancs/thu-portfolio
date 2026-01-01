@@ -8,8 +8,9 @@ const posts: { date: string; title: string; href?: string }[] = [
     href: "/blog/reflection-on-2025",
   },
   {
-    date: "2025-12-21",
-    title: "Understand React From First Principles",
+    date: "2025-12-31",
+    title: "Why everyone should watch Culinary Class Wars",
+    href: "/blog/ccw-review",
   },
 ];
 
