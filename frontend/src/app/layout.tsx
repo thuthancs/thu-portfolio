@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Thu Than",
   description: "Thu's Portfolio Website",
+  icons: {
+    icon: "/logo.PNG",
+    shortcut: "/logo.PNG",
+    apple: "/logo.PNG",
+  },
 }
 
 export default function RootLayout({
