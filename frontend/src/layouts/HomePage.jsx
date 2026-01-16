@@ -1,66 +1,132 @@
-import ContactGrid from "@/components/ContactGrid";
-import MenuBar from "@/components/MenuBar";
-import ProjectCard from "@/components/ProjectCard";
-import { getFeaturedProjects } from "@/lib/projects/mdx";
 import Image from "next/image";
-import "../app/globals.css";
+import Header from "../components/Header";
+import MenuBar from "../components/MenuBar";
 
 export default function HomePage() {
   return (
-    <div className="home-shell">
-      <div className="intro-grid">
-        {/* Left Column - Main Content */}
-        <div>
-          <MenuBar />
+    <>
+      {/* Header (matches .header-container block in index.html) */}
+      <Header />
 
-          {/* Introduction */}
-          <div className="mb-16 md:mb-20 max-w-4xl">
-            <p className="mb-8 text-[20px]">
-              I&apos;m Thu. <strong className="text-black">Design Engineer</strong>.
-            </p>
-            <p className="mb-8 text-[20px]">
-              I build tools and educational materials that help people and organizations{" "}
-              <strong className="text-black">leverage data</strong> to make informed decisions, augment human{" "}
-              <strong className="text-black">productivity and creativity</strong>, as well as{" "}
-              <strong className="text-black">understand</strong> the world a little bit better.
-            </p>
-            <p className="mt-8 text-[20px]">
-              Currently <strong className="text-black">designing data tools</strong> to advance{" "}
-              <strong className="text-black">academic success</strong> at Minerva and building{" "}
-              <strong className="text-black">a game-based RL learning platform</strong> for beginners.
+      {/* Hero (matches <section class="hero"> ... </section>) */}
+      <section className="hero">
+        {/* LEFT */}
+        <div className="hero__left">
+          {/* Command hover */}
+          <div className="command-hover">
+            <Image
+              src="/assets/command.svg"
+              alt=""
+              width={200}
+              height={200}
+              className="command command--default"
+              draggable={false}
+            />
+            <Image
+              src="/assets/tilted_command.svg"
+              alt=""
+              width={200}
+              height={200}
+              className="command command--hover"
+              draggable={false}
+            />
+            <p className="command-caption">my most used shortcut (i think) lol...</p>
+          </div>
+
+          {/* Avatar hover */}
+          <div className="avatar-hover">
+            <Image
+              src="/assets/profile_sticker.png"
+              alt=""
+              width={220}
+              height={220}
+              className="avatar avatar--default"
+              draggable={false}
+            />
+            <Image
+              src="/assets/avatar_heart.svg"
+              alt=""
+              width={220}
+              height={220}
+              className="avatar avatar--hover"
+              draggable={false}
+            />
+            <p className="avatar-caption">
+              i enjoy all acts of craftsmanship –<br />
+              code, design, and write
             </p>
           </div>
         </div>
 
-        {/* Right Column - Portrait */}
-        <div className="relative">
-          <Image
-            src="/portrait.jpeg"
-            alt="Profile Picture"
-            width={240}
-            height={480}
-            sizes="(min-width: 1024px) 240px, 40vw"
-            className="w-40 md:w-52 lg:w-60 h-auto mx-auto rounded-[8px]"
-            priority
-          />
-          {/* Social Links */}
-          <ContactGrid />
-        </div>
-      </div>
+        {/* CENTER */}
+        <div className="hero__center">
+          {/* Badge hover */}
+          <div className="badge-hover">
+            <div className="badge-group">
+              <div className="badge-critters">
+                <p className="badge-caption">
+                  hey beautiful, remember to drink some water and go out for a walk &lt;3
+                </p>
 
-      {/* Featured Projects */}
-      <section className="projects-grid projects-grid--home">
-        {getFeaturedProjects().map((project) => (
-          <ProjectCard
-            key={project.slug}
-            thumbnail={project.thumbnail}
-            title={project.title}
-            tags={project.tags}
-            summary={project.summary}
-            href={`/projects/${project.slug}`}
-          />
-        ))}
+                <div className="badge-critters-row">
+                  <Image src="/assets/chicken.svg" alt="" width={80} height={80} className="critter" />
+                  <Image src="/assets/cat.svg" alt="" width={80} height={80} className="critter" />
+                  <Image src="/assets/dog.svg" alt="" width={80} height={80} className="critter" />
+                </div>
+              </div>
+
+              <div className="hero__badge badge-tilt">Design Engineer Portfolio</div>
+            </div>
+          </div>
+
+          <h2 className="hero__headline">
+            building <strong>creative</strong>, <strong>playful</strong>, <strong>data-driven</strong>{" "}
+            software that brings joy, understanding, and clarity.
+          </h2>
+
+          <div>
+            <Image
+              src="/assets/tagline.svg"
+              alt=""
+              width={300}
+              height={120}
+              style={{ height: "auto" }}
+              draggable={false}
+            />
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="hero__right">
+          <div className="bar-hover">
+            <Image
+              src="/assets/tech_stack_bar.svg"
+              alt=""
+              width={240}
+              height={420}
+              className="bar bar--default"
+              draggable={false}
+            />
+            <Image
+              src="/assets/tilted_bar.svg"
+              alt=""
+              width={240}
+              height={420}
+              className="bar bar--hover"
+              draggable={false}
+            />
+            <p className="bar-caption">
+              my frontend tech stack.<br />
+              (JS/TS, HTML/CSS, TailwindCSS,<br />
+              React, Next.js, Figma)<br />
+              i am also proficient in python
+            </p>
+          </div>
+        </div>
       </section>
-    </div>
+
+      {/* Bottom menu (matches <nav class="bottom-menu"> in index.html) */}
+      <MenuBar />
+    </>
   );
 }
