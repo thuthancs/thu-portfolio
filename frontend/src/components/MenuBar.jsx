@@ -1,50 +1,45 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "../app/globals.css";
+
+const items = [
+  { href: "/", label: "home", icon: "/menu-icons/home.svg" },
+  { href: "/design", label: "design", icon: "/menu-icons/pen.svg" },
+  { href: "/projects", label: "code", icon: "/menu-icons/code.svg" },
+  { href: "/blog", label: "blog", icon: "/menu-icons/book.svg" },
+];
 
 export default function MenuBar() {
   const pathname = usePathname();
 
-  const isProjects = pathname?.startsWith("/projects");
-  const isDesign = pathname?.startsWith("/design");
-  const isBlog = pathname?.startsWith("/blog");
-  const isMisc = pathname?.startsWith("/misc");
-  const isAbout = pathname === "/" && !isProjects && !isDesign && !isBlog && !isMisc;
-
-  const linkClass = (active) =>
-    active ? "text-black" : "text-[#666666] hover:text-black";
-
   return (
-    <nav className="menu-bar">
-      <ul>
-        <li>
-          <Link href="/" className={linkClass(isAbout)}>
-            About
+    <nav className="bottom-menu" aria-label="Primary">
+      {items.map((item) => {
+        const isActive =
+          item.href === "/"
+            ? pathname === "/"
+            : pathname?.startsWith(item.href);
+
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="menu-item"
+            data-label={item.label}
+            aria-current={isActive ? "page" : undefined}
+          >
+            <Image
+              src={item.icon}
+              alt={item.label}
+              width={28}
+              height={28}
+              draggable={false}
+            />
           </Link>
-        </li>
-        <li>
-          <Link href="/projects" className={linkClass(isProjects)}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link href="/design" className={linkClass(isDesign)}>
-            Design
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog" className={linkClass(isBlog)}>
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link href="/misc" className={linkClass(isMisc)}>
-            Misc.
-          </Link>
-        </li>
-      </ul>
+        );
+      })}
     </nav>
   );
 }
