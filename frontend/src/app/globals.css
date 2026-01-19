@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   cursor: url("/assets/cursor.png") 4 4, auto;
 }
 
@@ -8,22 +9,23 @@ html {
 
 
 body {
-    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    padding: 30px 50px;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 30px 50px;
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .contact-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* push icons to the right */
-    gap: 48px;           
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* push icons to the right */
+  gap: 48px;
 }
 
 .contact-info img {
@@ -112,7 +114,8 @@ body {
 /* Side columns */
 .hero__left,
 .hero__right {
-  display: block; /* or just remove the flex styles */
+  display: block;
+  /* or just remove the flex styles */
 }
 
 
@@ -125,16 +128,19 @@ body {
 }
 
 .hero__left {
-  position: relative;      /* key line */
+  position: relative;
+  /* key line */
   width: 220px;
-  height: 320px;           /* gives space to “float” in */
+  height: 320px;
+  /* gives space to “float” in */
   margin-right: -150px;
 }
 
 .sticker {
   position: absolute;
   user-select: none;
-  pointer-events: none;    /* cursor passes through */
+  pointer-events: none;
+  /* cursor passes through */
 }
 
 
@@ -142,13 +148,15 @@ body {
 .sticker--command {
   width: 140px;
   top: -56px;
-  left: 90px;          /* push inward */
+  left: 90px;
+  /* push inward */
 }
 
 .sticker--avatar {
   width: 160px;
   bottom: -6px;
-  left: 80px;          /* push inward */
+  left: 80px;
+  /* push inward */
   transform: rotate(-24deg);
 }
 
@@ -171,7 +179,8 @@ body {
   bottom: -6px;
 
   width: 180px;
-  height: 180px;           /* IMPORTANT: defines the sticker area */
+  height: 180px;
+  /* IMPORTANT: defines the sticker area */
 }
 
 
@@ -186,11 +195,13 @@ body {
 
 .avatar-caption {
   position: absolute;
-  top: 172px;              /* puts it below a ~160px sticker */
+  top: 172px;
+  /* puts it below a ~160px sticker */
   left: 50%;
   transform: translate(-50%, 6px);
 
-  width: 260px;            /* wider than the sticker so text breathes */
+  width: 260px;
+  /* wider than the sticker so text breathes */
   margin: 0;
 
   font-family: "Coming Soon", cursive;
@@ -204,7 +215,8 @@ body {
 /* stack the two images */
 .avatar-hover .avatar {
   position: absolute;
-  inset: 0;                /* top:0; right:0; bottom:0; left:0 */
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0 */
   width: 100%;
   height: auto;
   display: block;
@@ -217,7 +229,8 @@ body {
 /* caption anchored right under the sticker box */
 .avatar-hover .avatar-caption {
   position: absolute;
-  top: calc(100% + 0px);  /* 14px below the sticker */
+  top: calc(100% + 0px);
+  /* 14px below the sticker */
   left: 50%;
   transform: translate(-50%, 6px);
 
@@ -250,7 +263,8 @@ body {
 
 .bar-hover {
   position: relative;
-  width: 180px;   /* match your bar size */
+  width: 180px;
+  /* match your bar size */
   height: 300px;
 }
 
@@ -281,7 +295,8 @@ body {
 
 .bar-caption {
   position: absolute;
-  top: calc(100% + 14px);   /* below the bar */
+  top: calc(100% + 14px);
+  /* below the bar */
   left: 50%;
   transform: translate(-50%, 6px);
 
@@ -305,12 +320,15 @@ body {
 
 .command-hover {
   position: absolute;
-  top: -40px;     /* keep your existing vertical tuning */
+  top: -40px;
+  /* keep your existing vertical tuning */
   left: 90px;
 
   width: 180px;
-  height: 160px;  /* reserve space so nothing jumps */
+  height: 160px;
+  /* reserve space so nothing jumps */
 }
+
 .command-hover .command {
   position: absolute;
   inset: 0;
@@ -322,10 +340,12 @@ body {
 .command-hover .command--hover {
   opacity: 0;
 }
+
 .command-caption {
   position: absolute;
   top: 50%;
-  right: calc(100% + 14px);  /* 👈 places it to the LEFT */
+  right: calc(100% + 14px);
+  /* 👈 places it to the LEFT */
   transform: translateY(-50%);
 
   width: 180px;
@@ -340,6 +360,7 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
 .command-hover:hover .command--default {
   opacity: 0;
 }
@@ -364,13 +385,15 @@ body {
 /* hidden content under the name */
 .name-popover {
   position: absolute;
-  top: calc(100% + 10px);   /* below the h1 */
+  top: calc(100% + 10px);
+  /* below the h1 */
   left: 0;
 
   display: grid;
   gap: 8px;
 
-  width: 180px;             /* adjust for wrapping */
+  width: 180px;
+  /* adjust for wrapping */
   opacity: 0;
   pointer-events: none;
 
@@ -385,7 +408,8 @@ body {
 
 /* flags */
 .flags {
-  width: 160px;             /* adjust */
+  width: 160px;
+  /* adjust */
   height: auto;
   display: block;
 }
@@ -408,7 +432,8 @@ body {
   display: flex;
   gap: 8px;
 
-  padding: 12px 10px 12px; /* extra top padding so tooltip has room */
+  padding: 12px 10px 12px;
+  /* extra top padding so tooltip has room */
   background: #f6f6f6;
   border-radius: 16px;
   border: 1px solid #d9d9d9;
@@ -451,7 +476,8 @@ body {
 .bottom-menu .menu-item:hover {
   transform: translateY(-14px) scale(1.18);
   background: #ffffff;
-  z-index: 2; /* keep it above neighbors */
+  z-index: 2;
+  /* keep it above neighbors */
 }
 
 /* tooltip pill */
@@ -492,7 +518,8 @@ body {
 .badge-group {
   position: relative;
   transform-origin: center;
-  transition: none; /* no easing */
+  transition: none;
+  /* no easing */
 }
 
 /* critters block sits above the badge, but is part of the same tilted group */
@@ -507,7 +534,8 @@ body {
 
   opacity: 0;
   pointer-events: none;
-  transition: none; /* no easing */
+  transition: none;
+  /* no easing */
 }
 
 .badge-critters-row {
@@ -538,10 +566,264 @@ body {
 }
 
 .badge-hover:hover .badge-group {
-  transform: rotate(-8deg) translateY(6px); /* tilt down */
+  transform: rotate(-8deg) translateY(6px);
+  /* tilt down */
 }
 
 /* --- React parity tweaks --- */
-.sticker--command { top: -22px; }  /* was lower */
-.sticker--z { top: 60px; }         /* pull the Z stack up */
-.sticker--avatar { top: 190px; }   /* pull avatar up */
+.sticker--command {
+  top: -22px;
+}
+
+/* was lower */
+.sticker--z {
+  top: 60px;
+}
+
+/* pull the Z stack up */
+.sticker--avatar {
+  top: 190px;
+}
+
+/* pull avatar up */
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about {
+  max-width: 1400px;
+  margin: 0 0;
+  padding: 32px 120px 72px;
+
+  display: grid;
+  grid-template-columns: 260px minmax(520px, 1fr) 260px;
+  column-gap: 80px;
+  align-items: start;
+}
+
+/* --- LEFT / RIGHT COLUMNS --- */
+
+.about__left,
+.about__right {
+  position: relative;
+  width: 260px;
+  height: 560px;
+}
+
+/* --- CENTER COLUMN --- */
+
+.about__center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* headline */
+.about__headline {
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* text block */
+.about__text {
+  max-width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__text p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* link highlight color */
+.about__text a {
+  color: #2f6bff;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+
+  .about__left,
+  .about__right {
+    display: none;
+  }
+
+  .about__center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about__text {
+    align-items: center;
+  }
+}
+
+/* =========================
+   ABOUT — FACE HOVER
+========================= */
+
+.face-hover {
+  position: relative;
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  /* keeps a stable box */
+  overflow: hidden;
+  /* prevents scaled hover from leaking */
+}
+
+.face {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   ABOUT — IMAGE LAYOUT
+========================= */
+
+.about__sticker {
+  position: absolute;
+}
+
+/* left column */
+.about__left .about__sticker--tl {
+  top: 0;
+  left: 40px;
+}
+
+.about__left .about__sticker--bl {
+  bottom: 0;
+  left: 0;
+}
+
+/* right column */
+.about__right .about__sticker--tr {
+  top: 0;
+  right: 40px;
+}
+
+.about__right .about__sticker--br {
+  bottom: 0;
+  right: 0;
+}
+
+.polaroid {
+  width: 220px;
+  position: relative;
+  padding: 14px;
+  padding-bottom: 32px;
+  /* space for caption */
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.polaroid .face-hover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f8f8f8;
+  /* optional, helps visually */
+}
+
+.polaroid .face-hover span,
+.polaroid .face-hover img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+}
+
+/* the image itself */
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.polaroid--tilt-left {
+  transform: rotate(-6deg);
+}
+
+.polaroid--tilt-right {
+  transform: rotate(16deg);
+}
+
+/* =========================
+   ABOUT — TEXT STYLES
+========================= */
+
+.about__text {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__text p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  letter-spacing: -0.01em;
+}
+
+.about__text a {
+  color: #2f6bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* =========================
+   POLAROID — CAPTION HOVER
+========================= */
+
+/* base caption (hidden) */
+.polaroid__caption {
+  margin: 12px 0 0;
+  font-family: "Coming Soon", cursive;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #111;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    opacity 200ms ease,
+    max-height 260ms ease;
+}
+
+/* only polaroids that opt in */
+.polaroid--caption-hover {
+  transition: transform 220ms ease, padding-bottom 260ms ease;
+}
+
+/* hover effect */
+.polaroid--caption-hover:hover {
+  transform: rotate(0deg);
+  padding-bottom: 16px;
+}
+
+/* reveal caption */
+.polaroid--caption-hover:hover .polaroid__caption {
+  opacity: 1;
+  max-height: 100px;
+}
