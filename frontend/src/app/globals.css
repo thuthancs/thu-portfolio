@@ -703,11 +703,11 @@ body {
   opacity: 1;
 }
 
-.face-hover:hover .face--default {
+.polaroid:hover .face--default {
   opacity: 0;
 }
 
-.face-hover:hover .face--hover {
+.polaroid:hover .face--hover {
   opacity: 1;
 }
 
