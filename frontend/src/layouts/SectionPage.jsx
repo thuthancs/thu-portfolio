@@ -25,6 +25,8 @@ const PROJECT_CATEGORIES = {
   "grading-dashboard": ["featured", "webapp"],
   "rl-game-learning": ["featured", "ai-ml"],
   "climate-perception-and-policy": ["data-analysis"],
+  "redlining-tree-cover": ["data-analysis"],
+  "20-years-kdrama": ["data-analysis"],
   "recursive-tree": ["creative-coding"],
   "one-shape-one-color": ["creative-coding"],
   "principles-animation": ["creative-coding"],
@@ -97,6 +99,8 @@ export default function SectionPage() {
                 tags={project.tags}
                 summary={project.summary}
                 href={`/projects/${project.slug}`}
+                codeUrl={project.codeUrl}
+                documentationUrl={project.documentationUrl}
               />
             ))
           ) : (
