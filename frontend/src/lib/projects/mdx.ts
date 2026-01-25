@@ -9,15 +9,19 @@ const projects: ProjectMetaData[] = [
     thumbnail: "/project_previews/inline.svg",
     tags: ["automation", "javascript"],
     featured: true,
+    codeUrl: "https://github.com/thuthancs/inline",
+    documentationUrl: "https://www.notion.so/thuinanutshell/inline-2f027ab8c7b8804ebee2d5013614983c?source=copy_link",
   },
   {
     slug: "open-paper",
     title: "open paper",
     summary:
-      "📚 Open Paper is a workbench for managing your research library. Read, annotate, and understand your papers all in one place. Use an AI assistant to conduct your literature review.",
+      "📚 contributed to a workbench for managing your research library. Read, annotate, and understand your papers all in one place. Use an AI assistant to conduct your literature review.",
     thumbnail: "/project_previews/open_paper.png",
     tags: ["research", "webapp"],
     featured: true,
+    codeUrl: "https://github.com/khoj-ai/openpaper",
+    documentationUrl: "https://openpaper.ai/home"
   },
   {
     slug: "grading-dashboard",
@@ -71,6 +75,24 @@ const projects: ProjectMetaData[] = [
       "analysis of how climate change perceptions influence policy support using survey data.",
     thumbnail: "/project_previews/climate_perception2.png",
     tags: ["research", "climate", "R"],
+    featured: false,
+  },
+  {
+    slug: "redlining-tree-cover",
+    title: "Redlining and Tree Cover",
+    summary:
+      "data analysis exploring the relationship between historical redlining practices and current tree cover distribution in urban areas.",
+    thumbnail: "/project_previews/redlining_tree_cover.png",
+    tags: ["data-analysis", "research", "python"],
+    featured: false,
+  },
+  {
+    slug: "20-years-kdrama",
+    title: "20 years of K-drama",
+    summary:
+      "comprehensive data analysis of korean drama trends, ratings, and viewer patterns over two decades.",
+    thumbnail: "/project_previews/kdrama_analysis.png",
+    tags: ["data-analysis", "visualization", "python"],
     featured: false,
   },
   {

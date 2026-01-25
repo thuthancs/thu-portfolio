@@ -27,6 +27,8 @@ export default function DesignPage() {
                 tags={project.tags}
                 summary={project.summary}
                 href={project.href}
+                codeUrl={project.codeUrl}
+                documentationUrl={project.documentationUrl}
               />
             ))
           ) : (
