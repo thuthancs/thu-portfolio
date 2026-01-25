@@ -13,19 +13,28 @@ const FILTERS = [
   { id: "simulation", label: "Simulation" },
   { id: "creative-coding", label: "Creative Coding" },
   { id: "ai-ml", label: "AI/ML" },
+  { id: "fun", label: "Fun" },
 ];
 
 // Map project slugs to one or more high-level categories.
 // This keeps category logic in one place and is easy to extend
 // as you add more projects.
 const PROJECT_CATEGORIES = {
-  "notion-chrome-extension": ["featured", "webapp"],
+  "inline": ["featured", "webapp"],
+  "open-paper": ["featured", "webapp"],
   "grading-dashboard": ["featured", "webapp"],
   "rl-game-learning": ["featured", "ai-ml"],
   "climate-perception-and-policy": ["data-analysis"],
   "recursive-tree": ["creative-coding"],
   "one-shape-one-color": ["creative-coding"],
   "principles-animation": ["creative-coding"],
+  "airport-queue-simulation": ["simulation"],
+  "traffic-across-4-cities": ["simulation"],
+  "bacteria-growth": ["simulation"],
+  "forest-fire-spread": ["simulation"],
+  "vietnamese-letters-classification-generation": ["ai-ml"],
+  "github-colors": ["fun"],
+  "github-pets": ["fun"],
 };
 
 export default function SectionPage() {
@@ -48,33 +57,37 @@ export default function SectionPage() {
     <div className="home-shell">
       <MenuBar />
 
-      <section aria-labelledby="projects-heading">
+      <section aria-labelledby="projects-heading" className="section-container">
         <div className="section-header">
           <h1 id="projects-heading" className="section-title">
             Projects
           </h1>
-        </div>
-
-        {/* Filter buttons */}
-        <div className="section-filters" role="tablist" aria-label="Project categories">
-          {FILTERS.map((filter) => (
-            <button
-              key={filter.id}
-              type="button"
-              onClick={() => setActiveFilter(filter.id)}
-              className={`section-filter-button${
-                activeFilter === filter.id ? " section-filter-button--active" : ""
-              }`}
-              role="tab"
-              aria-selected={activeFilter === filter.id}
-            >
-              {filter.label}
-            </button>
-          ))}
+          {/* Filter buttons */}
+          <div className="section-filters" role="tablist" aria-label="Project categories">
+            {FILTERS.map((filter) => (
+              <button
+                key={filter.id}
+                type="button"
+                onClick={() => setActiveFilter(filter.id)}
+                className={`section-filter-button${activeFilter === filter.id ? " section-filter-button--active" : ""
+                  }`}
+                role="tab"
+                aria-selected={activeFilter === filter.id}
+                aria-controls="projects-grid"
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Projects grid */}
-        <div className="projects-grid" aria-live="polite">
+        <div
+          id="projects-grid"
+          className="projects-grid"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (
               <ProjectCard

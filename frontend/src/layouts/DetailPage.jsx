@@ -78,7 +78,7 @@ export default function DetailPage({ title, tags = [], summary, toc = [], childr
   return (
     <div className="home-shell">
       <MenuBar />
-      <div className="detail-grid">
+      <div className={`detail-grid${toc.length === 0 ? " detail-grid--no-toc" : ""}`}>
         {/* Left column: table of contents */}
         <aside className="detail-toc">
           <h2 className="detail-toc-title">{title}</h2>
