@@ -7,13 +7,13 @@ import { useMemo, useState } from "react";
 import "../app/globals.css";
 
 const FILTERS = [
-  { id: "featured", label: "Featured" },
-  { id: "data-analysis", label: "Data Analysis" },
-  { id: "webapp", label: "Web App" },
-  { id: "simulation", label: "Simulation" },
-  { id: "creative-coding", label: "Creative Coding" },
-  { id: "ai-ml", label: "AI/ML" },
-  { id: "fun", label: "Fun" },
+  { id: "featured", label: "featured" },
+  { id: "data-analysis", label: "data analysis" },
+  { id: "webapp", label: "web app" },
+  { id: "simulation", label: "simulation" },
+  { id: "creative-coding", label: "creative coding" },
+  { id: "ai-ml", label: "ai/ml" },
+  { id: "fun", label: "fun" },
 ];
 
 // Map project slugs to one or more high-level categories.
@@ -60,7 +60,7 @@ export default function SectionPage() {
       <section aria-labelledby="projects-heading" className="section-container">
         <div className="section-header">
           <h1 id="projects-heading" className="section-title">
-            Projects
+            projects
           </h1>
           {/* Filter buttons */}
           <div className="section-filters" role="tablist" aria-label="Project categories">

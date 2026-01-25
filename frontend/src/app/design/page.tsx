@@ -13,7 +13,7 @@ export default function DesignPage() {
       <section aria-labelledby="design-heading">
         <div className="section-header">
           <h1 id="design-heading" className="section-title">
-            Design
+            design
           </h1>
         </div>
 
