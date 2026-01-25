@@ -123,7 +123,7 @@ const projects: ProjectMetaData[] = [
     title: "GitHub Colors",
     summary:
       "A fun visualization of programming language colors used on GitHub.",
-    thumbnail: "/project_previews/github_colors1.jpg",
+    thumbnail: "/project_previews/github_colors.jpg",
     tags: ["fun", "visualization"],
     featured: false,
   },
