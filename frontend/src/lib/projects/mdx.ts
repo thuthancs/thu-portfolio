@@ -122,7 +122,7 @@ const projects: ProjectMetaData[] = [
     slug: "github-colors",
     title: "GitHub Colors",
     summary:
-      "A fun visualization of programming language colors used on GitHub.",
+      "a chrome extension to customize your contribution color grid",
     thumbnail: "/project_previews/github_colors.jpg",
     tags: ["fun", "visualization"],
     featured: false,
@@ -131,7 +131,7 @@ const projects: ProjectMetaData[] = [
     slug: "github-pets",
     title: "GitHub Pets",
     summary:
-      "Interactive pet collection inspired by GitHub's contribution graph.",
+      "an extension that displays a pet on your GitHub contribution graph",
     thumbnail: "/project_previews/github_pets.png",
     tags: ["fun", "interactive"],
     featured: false,
