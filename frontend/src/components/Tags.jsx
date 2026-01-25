@@ -50,18 +50,34 @@ const TAG_COLORS = {
     return luminance < 0.5 ? "#FFFFFF" : "#000000";
   }
   
+  function getBorderColor(hex) {
+    const rgb = hexToRgb(hex);
+    const luminance = getRelativeLuminance(rgb);
+    // For light backgrounds, use a darker border; for dark backgrounds, use a lighter border
+    if (luminance < 0.5) {
+      // Dark background - use lighter border
+      return `rgba(255, 255, 255, 0.2)`;
+    } else {
+      // Light background - use darker border
+      return `rgba(0, 0, 0, 0.12)`;
+    }
+  }
+  
   export default function Tags({ tags = [] }) {
     return (
-      <div className="flex flex-wrap gap-2 mb-2 -mt-2">
+      <div className="project-tags-container">
         {tags.map((tag) => {
           const bg = getTagColor(tag);
           const textColor = getTextColorForBg(bg);
-  
+
           return (
             <span
               key={tag}
-              style={{ backgroundColor: bg, color: textColor }}
-              className="inline-flex items-center px-2 py-0.5 text-[12px] lowercase tracking-wide"
+              style={{ 
+                backgroundColor: bg, 
+                color: textColor
+              }}
+              className="project-tag"
             >
               {tag}
             </span>

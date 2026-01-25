@@ -17,7 +17,7 @@ export default function DesignPage() {
           </h1>
         </div>
 
-        <div className="projects-grid" aria-live="polite">
+        <div className="projects-grid design-grid" aria-live="polite">
           {designProjects.length > 0 ? (
             designProjects.map((project) => (
               <ProjectCard

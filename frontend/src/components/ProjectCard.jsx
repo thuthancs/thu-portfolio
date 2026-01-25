@@ -1,4 +1,3 @@
-import Tags from "@/components/Tags";
 import Image from "next/image";
 import Link from "next/link";
 import "../app/globals.css";
@@ -17,24 +16,21 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
     <div className="project-card-frame">
       <article className="project-card">
         {/* Thumbnail */}
-        <div className="mt-0">
-          {thumbnail && (
+        {thumbnail && (
+          <div className="project-card-thumbnail">
             <Image
               src={thumbnail}
               alt={title}
               width={600}
               height={400}
-              className="w-full h-[240px] object-cover"
+              className="project-card-image"
             />
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Text content */}
         <div>
           <p className="highlight mb-4">{title}</p>
-
-          {/* Tags */}
-          <Tags tags={tags} />
 
           {/* Summary */}
           <p className="description">{summary}</p>
@@ -45,7 +41,7 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
 
   if (href) {
     return (
-      <Link href={href} className="block">
+      <Link href={href} className="block project-card-link">
         {card}
       </Link>
     );
