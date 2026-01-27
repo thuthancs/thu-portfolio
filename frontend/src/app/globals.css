@@ -47,7 +47,9 @@ body {
 .hero {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 72px 120px;
+  padding: 16px 120px 72px;
+  min-height: calc(100vh - 60px - 104px - 80px);
+  /* Account for body padding (30px top + 30px bottom = 60px), hero padding (32px top + 72px bottom = 104px), and header height (~80px) */
 
   display: grid;
   grid-template-columns: 160px minmax(320px, 1fr) 160px;
@@ -1180,7 +1182,7 @@ body {
 .detail-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 32px;
+  gap: 64px;
   align-items: start;
   max-width: 1200px;
   margin: 0 auto;
@@ -1193,7 +1195,7 @@ body {
 @media (max-width: 1024px) {
   .detail-grid {
     grid-template-columns: 240px 1fr;
-    gap: 24px;
+    gap: 48px;
   }
 
   .detail-grid--no-toc {
@@ -1213,6 +1215,8 @@ body {
   position: sticky;
   top: 32px;
   padding-top: 8px;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -1280,6 +1284,7 @@ body {
 .detail-content {
   position: relative;
   min-width: 0;
+  padding-top: 8px;
 }
 
 .detail-scroll-progress {
@@ -1309,6 +1314,7 @@ body {
   color: #111;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  max-width: 880px;
 }
 
 .detail-summary {
@@ -1316,13 +1322,14 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: #555;
-  max-width: 720px;
+  max-width: 880px;
 }
 
 .detail-body {
   font-size: 16px;
   line-height: 1.7;
   color: #333;
+  max-width: 880px;
 }
 
 .detail-body h2 {
@@ -1363,7 +1370,8 @@ body {
 }
 
 .detail-body img {
-  max-width: 100%;
+  max-width: 880px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 24px 0;
