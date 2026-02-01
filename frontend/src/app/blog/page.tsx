@@ -16,7 +16,7 @@ const posts: { date: string; title: string; href?: string }[] = [
   {
     date: "2026-01-06",
     title: "React from First Principles (P1) - Abstraction of the DOM",
-    href: "/blog/react-p1",
+    href: "https://thuwritescode.substack.com/p/react-from-first-principles-p1-abstraction",
   },
   {
     date: "2026-01-26",
@@ -59,23 +59,40 @@ export default function BlogPage() {
 
         {/* List of blog posts */}
         <ul className="blog-list" aria-live="polite">
-          {posts.map((post) => (
-            <li key={post.title} className="blog-list-item">
-              {post.href ? (
-                <Link href={post.href} className="blog-list-link">
-                  <span className="blog-list-date">{post.date}</span>
-                  <span className="blog-list-separator">|</span>
-                  <span className="blog-list-title">{post.title}</span>
-                </Link>
-              ) : (
-                <div className="blog-list-link">
-                  <span className="blog-list-date">{post.date}</span>
-                  <span className="blog-list-separator">|</span>
-                  <span className="blog-list-title">{post.title}</span>
-                </div>
-              )}
-            </li>
-          ))}
+          {posts.map((post) => {
+            const isExternal = post.href?.startsWith("http");
+
+            return (
+              <li key={post.title} className="blog-list-item">
+                {post.href ? (
+                  isExternal ? (
+                    <a
+                      href={post.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="blog-list-link"
+                    >
+                      <span className="blog-list-date">{post.date}</span>
+                      <span className="blog-list-separator">|</span>
+                      <span className="blog-list-title">{post.title}</span>
+                    </a>
+                  ) : (
+                    <Link href={post.href} className="blog-list-link">
+                      <span className="blog-list-date">{post.date}</span>
+                      <span className="blog-list-separator">|</span>
+                      <span className="blog-list-title">{post.title}</span>
+                    </Link>
+                  )
+                ) : (
+                  <div className="blog-list-link">
+                    <span className="blog-list-date">{post.date}</span>
+                    <span className="blog-list-separator">|</span>
+                    <span className="blog-list-title">{post.title}</span>
+                  </div>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
     </div>
