@@ -24,11 +24,8 @@ export default function DesignPage() {
                 key={project.slug}
                 thumbnail={project.thumbnail}
                 title={project.title}
-                tags={project.tags}
                 summary={project.summary}
                 href={project.href}
-                codeUrl={project.codeUrl}
-                documentationUrl={project.documentationUrl}
               />
             ))
           ) : (

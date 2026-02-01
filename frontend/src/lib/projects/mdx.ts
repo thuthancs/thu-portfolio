@@ -9,8 +9,7 @@ const projects: ProjectMetaData[] = [
     thumbnail: "/project_previews/inline.svg",
     tags: ["automation", "javascript"],
     featured: true,
-    codeUrl: "https://github.com/thuthancs/inline",
-    documentationUrl: "https://www.notion.so/thuinanutshell/inline-2f027ab8c7b8804ebee2d5013614983c?source=copy_link",
+    href: "https://github.com/thuthancs/inline",
   },
   {
     slug: "open-paper",
@@ -20,8 +19,7 @@ const projects: ProjectMetaData[] = [
     thumbnail: "/project_previews/open_paper.png",
     tags: ["research", "webapp"],
     featured: true,
-    codeUrl: "https://github.com/khoj-ai/openpaper",
-    documentationUrl: "https://openpaper.ai/home"
+    href: "https://github.com/khoj-ai/openpaper",
   },
   {
     slug: "grading-dashboard",
@@ -39,6 +37,7 @@ const projects: ProjectMetaData[] = [
       "interactive tutorials introducing RL concepts through simple games like snake and flappy bird.",
     thumbnail: "/project_previews/rl.png",
     tags: ["javascript", "python", "react"],
+    href: "https://github.com/thuthancs/rl-games-tutorials",
     featured: true,
   },
   {
@@ -48,6 +47,7 @@ const projects: ProjectMetaData[] = [
       "creative-coding visualization that renders a branching recursive tree using python",
     thumbnail: "/project_previews/recursive_trees.png",
     tags: ["nature", "python"],
+    href: "https://github.com/thuthancs/beautiful-math",
     featured: false,
   },
   {
@@ -87,21 +87,13 @@ const projects: ProjectMetaData[] = [
     featured: false,
   },
   {
-    slug: "20-years-kdrama",
-    title: "20 years of K-drama",
-    summary:
-      "comprehensive data analysis of korean drama trends, ratings, and viewer patterns over two decades.",
-    thumbnail: "/project_previews/kdrama_analysis.png",
-    tags: ["data-analysis", "visualization", "python"],
-    featured: false,
-  },
-  {
     slug: "airport-queue-simulation",
     title: "airport queue simulation",
     summary:
       "simulation modeling airport queue dynamics and passenger flow optimization.",
     thumbnail: "/project_previews/airport_queue.png",
     tags: ["simulation", "python"],
+    href: "https://drive.google.com/file/d/15PX_Y-BCHpgJ2Jwub18BtKqv_JhzUQ93/view",
     featured: false,
   },
   {
@@ -111,6 +103,7 @@ const projects: ProjectMetaData[] = [
       "simulation of traffic patterns and congestion across multiple urban environments.",
     thumbnail: "/project_previews/traffic_cities.png",
     tags: ["simulation", "python"],
+    href: "https://drive.google.com/file/d/1sIu95fJfBJEnWv0A4mTSvAUMU_fA-DLI/view",
     featured: false,
   },
   {
@@ -120,6 +113,7 @@ const projects: ProjectMetaData[] = [
       "mathematical modeling and simulation of bacterial population growth dynamics.",
     thumbnail: "/project_previews/bacteria_growth.png",
     tags: ["simulation", "python"],
+    href: "https://drive.google.com/file/d/11VTE_aLaIc5pw_En8u75oUmuU8LffuYl/view",
     featured: false,
   },
   {
@@ -129,6 +123,7 @@ const projects: ProjectMetaData[] = [
       "cellular automata simulation of wildfire propagation and containment strategies.",
     thumbnail: "/project_previews/forest_fire.png",
     tags: ["simulation", "python"],
+    href: "https://drive.google.com/file/d/1UDQC_nmcB2tW00KEDgqQdt-tYOK21EK8/view",
     featured: false,
   },
   {
@@ -137,6 +132,7 @@ const projects: ProjectMetaData[] = [
     summary:
       "machine learning models for classifying and generating vietnamese letters using deep learning techniques.",
     thumbnail: "/project_previews/vietnamese_letters.png",
+    href: "https://drive.google.com/file/d/1dnfGJTjByxZfF4yYWFff-rbq6sdU9SLE/view",
     tags: ["ai-ml", "python"],
     featured: false,
   },
@@ -147,6 +143,7 @@ const projects: ProjectMetaData[] = [
       "a chrome extension to customize your contribution color grid",
     thumbnail: "/project_previews/github_colors.jpg",
     tags: ["fun", "visualization"],
+    href: "https://chromewebstore.google.com/detail/github-colors/pknefihfjocifmpgihifpcijcjjffjfc?hl=en-US&utm_source=ext_sidebar",
     featured: false,
   },
   {
@@ -156,6 +153,7 @@ const projects: ProjectMetaData[] = [
       "an extension that displays a pet on your GitHub contribution graph",
     thumbnail: "/project_previews/github_pets.png",
     tags: ["fun", "interactive"],
+    href: "https://chromewebstore.google.com/detail/github-pets/afnnlbdeoonfpdbphkdkedibpimobeah?hl=en-US&utm_source=ext_sidebar",
     featured: false,
   },
 ];

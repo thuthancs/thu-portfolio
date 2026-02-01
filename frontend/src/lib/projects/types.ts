@@ -6,6 +6,4 @@ export type ProjectMetaData = {
     tags: string[];
     href?: string;
     featured?: boolean;
-    codeUrl?: string;
-    documentationUrl?: string;
 }

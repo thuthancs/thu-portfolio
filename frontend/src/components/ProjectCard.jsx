@@ -6,18 +6,11 @@ import "../app/globals.css";
  * @param {{
  *   thumbnail?: string;
  *   title: string;
- *   tags?: string[];
  *   summary: string;
  *   href?: string;
- *   codeUrl?: string;
- *   documentationUrl?: string;
  * }} props
  */
-export default function ProjectCard({ thumbnail, title, tags = [], summary, href, codeUrl, documentationUrl }) {
-  const handleLinkClick = (e) => {
-    e.stopPropagation();
-  };
-
+export default function ProjectCard({ thumbnail, title, summary, href }) {
   const card = (
     <div className="project-card-frame">
       <article className="project-card">
@@ -38,34 +31,6 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
         <div>
           <div className="project-card-title-row">
             <p className="highlight">{title}</p>
-            {/* Code and Documentation links */}
-            {(codeUrl || documentationUrl) && (
-              <div className="project-card-links" onClick={handleLinkClick}>
-                {codeUrl && (
-                  <a
-                    href={codeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-card-link-item"
-                  >
-                    code
-                  </a>
-                )}
-                {codeUrl && documentationUrl && (
-                  <span className="project-card-link-separator">|</span>
-                )}
-                {documentationUrl && (
-                  <a
-                    href={documentationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-card-link-item"
-                  >
-                    doc
-                  </a>
-                )}
-              </div>
-            )}
           </div>
 
           {/* Summary */}
@@ -76,6 +41,14 @@ export default function ProjectCard({ thumbnail, title, tags = [], summary, href
   );
 
   if (href) {
+    const isExternal = href.startsWith('http');
+    if (isExternal) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className="block project-card-link">
+          {card}
+        </a>
+      );
+    }
     return (
       <Link href={href} className="block project-card-link">
         {card}

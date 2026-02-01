@@ -96,11 +96,8 @@ export default function SectionPage() {
                 key={project.slug}
                 thumbnail={project.thumbnail}
                 title={project.title}
-                tags={project.tags}
                 summary={project.summary}
-                href={`/projects/${project.slug}`}
-                codeUrl={project.codeUrl}
-                documentationUrl={project.documentationUrl}
+                href={project.href || `/projects/${project.slug}`}
               />
             ))
           ) : (
