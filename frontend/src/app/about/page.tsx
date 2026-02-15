@@ -64,7 +64,7 @@ export default function AboutPage() {
                             </p>
                             <br></br>
                             <p>
-                                i like origami, <a href="https://www.instagram.com/divachefs/">cooking</a>, drawing, reading, writing, and coding algorithms from scratch :) hover over the photos to see some fun facts about me!
+                                i enjoy origami, <a href="https://www.instagram.com/divachefs/">cooking</a>, and coding algorithms from scratch :) in the next 3 years, i want to build tools and infrastructure for scientific discovery and for people to achieve their full creative potential!
                             </p>
                         </div>
                     </div>

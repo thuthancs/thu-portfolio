@@ -24,6 +24,8 @@ const PROJECT_CATEGORIES = {
   "open-paper": ["featured", "webapp"],
   "grading-dashboard": ["featured", "webapp"],
   "rl-game-learning": ["featured", "ai-ml"],
+  "seam": ["featured", "webapp"],
+  "mixtape": ["featured", "webapp"],
   "climate-perception-and-policy": ["data-analysis"],
   "redlining-tree-cover": ["data-analysis"],
   "20-years-kdrama": ["data-analysis"],

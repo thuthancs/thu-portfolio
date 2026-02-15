@@ -22,6 +22,26 @@ const projects: ProjectMetaData[] = [
     href: "https://github.com/khoj-ai/openpaper",
   },
   {
+    slug: "seam",
+    title: "seam",
+    summary:
+      "🌲🎨 treehacks 2026 — a seamless AI-assisted dev tool for design engineers. seam creates a smooth flow from in-browser edit to codebase change. built with lots of love for design.",
+    thumbnail: "/project_previews/seam.png",
+    tags: ["ai", "webapp", "design"],
+    featured: true,
+    href: "https://github.com/thuthancs/seam",
+  },
+  {
+    slug: "mixtape",
+    title: "mixtape",
+    summary:
+      "🌲🎶 treehacks 2026 — mixtape is figjam for music exploration.a react flow app (visual-audio) to make and jam music collaboratively with other people. built with suno ai music.",
+    thumbnail: "/project_previews/mixtape.png",
+    tags: ["react", "webapp", "music"],
+    featured: true,
+    href: "https://github.com/thuthancs/mixtape",
+  },
+  {
     slug: "grading-dashboard",
     title: "grading data dashboard",
     summary:
