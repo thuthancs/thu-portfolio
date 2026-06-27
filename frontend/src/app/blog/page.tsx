@@ -14,34 +14,9 @@ const posts: { date: string; title: string; href?: string }[] = [
     href: "/blog/ccw-review",
   },
   {
-    date: "2026-01-06",
-    title: "React from First Principles (P1) - Abstraction of the DOM",
-    href: "https://thuwritescode.substack.com/p/react-from-first-principles-p1-abstraction",
-  },
-  {
-    date: "2026-01-26",
-    title: "React from First Principles (P2) - Components and State Management",
-    href: "/blog/react-p2",
-  },
-  {
-    date: "2026-01-27",
-    title: "React from First Principles (P3) - Reconciliation and Diffing",
-    href: "/blog/react-p3",
-  },
-  {
-    date: "2026-01-28",
-    title: "React from First Principles (P4) - Hooks and Context",
-    href: "/blog/react-p4",
-  },
-  {
-    date: "2026-01-29",
-    title: "React from First Principles (P5) - Error Handling and Testing",
-    href: "/blog/react-p5",
-  },
-  {
-    date: "2026-01-30",
-    title: "React from First Principles (P6) - Performance Optimization and Debugging",
-    href: "/blog/react-p6",
+    date: "2026-06-26",
+    title: "design is care",
+    href: "/blog/design-is-care",
   },
 ];
 

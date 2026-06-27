@@ -1377,6 +1377,22 @@ body {
   margin: 24px 0;
 }
 
+.detail-body figure {
+  margin: 24px 0 20px 0;
+}
+
+.detail-body figure img {
+  margin: 0;
+}
+
+.detail-body figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #888;
+}
+
 .detail-body ul,
 .detail-body ol {
   margin: 20px 0;
