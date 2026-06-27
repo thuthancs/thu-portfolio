@@ -12,7 +12,7 @@ const TOC = [
 export default function CCWReviewPage() {
   return (
     <DetailPage
-      title="Why everyone should watch Culinary Class Wars"
+      title="why everyone should watch culinary class wars"
       summary="A reflection on taste, mastery, and the lessons we can learn from a cooking show."
       toc={TOC}
     >

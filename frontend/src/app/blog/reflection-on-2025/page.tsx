@@ -13,7 +13,7 @@ const TOC = [
 export default function ReflectionOn2025Page() {
   return (
     <DetailPage
-      title="Reflection on 2025"
+      title="reflection on 2025"
       summary="You cannot connect the dots looking forward. You can only connect them looking backward."
       toc={TOC}
     >

@@ -1388,7 +1388,8 @@ body {
 .detail-body figcaption {
   margin-top: 8px;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 300;
   line-height: 1.5;
   color: #888;
 }
@@ -1447,7 +1448,8 @@ body {
 .blog-list-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 16px;
   text-decoration: none;
   color: #333;
   font-size: 16px;
@@ -1465,17 +1467,14 @@ body {
   font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   white-space: nowrap;
-}
-
-.blog-list-separator {
-  color: #d9d9d9;
-  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .blog-list-title {
   color: #111;
   font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
+  min-width: 0;
 }
 
 .blog-list-link:hover .blog-list-title {

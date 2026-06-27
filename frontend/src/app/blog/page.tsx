@@ -5,12 +5,12 @@ import "../globals.css";
 const posts: { date: string; title: string; href?: string }[] = [
   {
     date: "2025-12-19",
-    title: "Reflection on 2025",
+    title: "reflection on 2025",
     href: "/blog/reflection-on-2025",
   },
   {
     date: "2025-12-31",
-    title: "Why everyone should watch Culinary Class Wars",
+    title: "why everyone should watch culinary class wars",
     href: "/blog/ccw-review",
   },
   {
@@ -47,22 +47,19 @@ export default function BlogPage() {
                       rel="noopener noreferrer"
                       className="blog-list-link"
                     >
-                      <span className="blog-list-date">{post.date}</span>
-                      <span className="blog-list-separator">|</span>
                       <span className="blog-list-title">{post.title}</span>
+                      <span className="blog-list-date">{post.date}</span>
                     </a>
                   ) : (
                     <Link href={post.href} className="blog-list-link">
-                      <span className="blog-list-date">{post.date}</span>
-                      <span className="blog-list-separator">|</span>
                       <span className="blog-list-title">{post.title}</span>
+                      <span className="blog-list-date">{post.date}</span>
                     </Link>
                   )
                 ) : (
                   <div className="blog-list-link">
-                    <span className="blog-list-date">{post.date}</span>
-                    <span className="blog-list-separator">|</span>
                     <span className="blog-list-title">{post.title}</span>
+                    <span className="blog-list-date">{post.date}</span>
                   </div>
                 )}
               </li>
